@@ -21,7 +21,7 @@
 #############################################################################
 {
     "name": "Vista Backend Theme",
-    "version": "18.0.1.0.1",
+    "version": "18.0.2.1.1",
     "category": "Themes/Backend",
     "summary": "Vista Backend Theme is an attractive theme for backend",
     "description": """Minimalist and elegant backend theme for Odoo 17, 
