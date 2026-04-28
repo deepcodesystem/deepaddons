@@ -1,0 +1,1867 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* synconics_bi_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260119\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 22:07+0000\n"
+"PO-Revision-Date: 2026-04-28 22:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__60000
+msgid "1 Minute"
+msgstr "1 minute"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__100
+msgid "100"
+msgstr "100"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__15000
+msgid "15 Seconds"
+msgstr "15 secondes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__120000
+msgid "2 Minutes"
+msgstr "2 minutes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__200
+msgid "200"
+msgstr "200"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__30000
+msgid "30 Seconds"
+msgstr "30 secondes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__300
+msgid "300"
+msgstr "300"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__400
+msgid "400"
+msgstr "400"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__45000
+msgid "45 Seconds"
+msgstr "45 secondes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__auto_reload_duration__300000
+msgid "5 Minutes"
+msgstr "5 minutes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__500
+msgid "500"
+msgstr "500"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__600
+msgid "600"
+msgstr "600"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__700
+msgid "700"
+msgstr "700"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__800
+msgid "800"
+msgstr "800"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__font_weight__900
+msgid "900"
+msgstr "900"
+
+#. module: synconics_bi_dashboard
+#: model:mail.template,body_html:synconics_bi_dashboard.mail_template_dashboard_chart
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                Hello, <t/>\n"
+"                <br/><br/>\n"
+"                You have received mail related to the dashboard.\n"
+"                    <br/><br/><br/>\n"
+"                    <a t-att-href=\"ctx.get('url')\" style=\"border-radius:0px;margin:0px;cursor:pointer;appearance:button;text-transform:none;overflow-y:visible;overflow-x:visible;line-height:inherit;font-size:inherit;font-family:inherit;background-color: #714B67; padding: 6px 8px 6px 8px; text-decoration: none; color:#ffffff; border-radius: 10px; font-size:13px; font-weight: 700; border: 0px;\" class=\"o_default_snippet_text\">View Dashboard</a>\n"
+"                    <br/><br/>\n"
+"                    <t t-if=\"ctx.get('data')\">\n"
+"                        <br/>\n"
+"                        <t t-foreach=\"ctx['data']\" t-as=\"item\">\n"
+"                            <p t-if=\"item.get('chart_type') not in ['tile', 'kpi']\">\n"
+"                                <b>\n"
+"                                    <t t-out=\"item['name'] or ''\"/>\n"
+"                                </b>\n"
+"                            </p>\n"
+"                            <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                <img t-attf-src=\"{{item.get('image')}}\" style=\"padding: 0px; margin: 0px; height: auto;\"/>\n"
+"                            </div>\n"
+"                        </t>\n"
+"                        <br/>\n"
+"                    </t>\n"
+"                Thank you.\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                Bonjour, <t/>\n"
+"                <br/><br/>\n"
+"                Vous avez reçu un courrier relatif au tableau de bord.\n"
+"                    <br/><br/><br/>\n"
+"                    <a t-att-href=\"ctx.get('url')\" style=\"border-radius:0px;margin:0px;cursor:pointer;appearance:button;text-transform:none;overflow-y:visible;overflow-x:visible;line-height:inherit;font-size:inherit;font-family:inherit;background-color: #714B67; padding: 6px 8px 6px 8px; text-decoration: none; color:#ffffff; border-radius: 10px; font-size:13px; font-weight: 700; border: 0px;\" class=\"o_default_snippet_text\">Voir le tableau de bord</a>\n"
+"                    <br/><br/>\n"
+"                    <t t-if=\"ctx.get('data')\">\n"
+"                        <br/>\n"
+"                        <t t-foreach=\"ctx['data']\" t-as=\"item\">\n"
+"                            <p t-if=\"item.get('chart_type') not in ['tile', 'kpi']\">\n"
+"                                <b>\n"
+"                                    <t t-out=\"item['name'] or ''\"/>\n"
+"                                </b>\n"
+"                            </p>\n"
+"                            <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                <img t-attf-src=\"{{item.get('image')}}\" style=\"padding: 0px; margin: 0px; height: auto;\"/>\n"
+"                            </div>\n"
+"                        </t>\n"
+"                        <br/>\n"
+"                    </t>\n"
+"                Merci.\n"
+"                </p>\n"
+"            </div>"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.kpi_layout_five
+msgid "<span>vs Prev</span>"
+msgstr "<span>vs Précédent</span>"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__access_by
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__access_by
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_filter
+msgid "Access By"
+msgstr "Accès par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_res_users__model_access
+msgid "Access Controls"
+msgstr "Contrôles d'accès"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__group_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__group_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__group_ids
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_access__access_by__access_group
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__access_by__access_group
+msgid "Access Groups"
+msgstr "Groupes d'accès"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__created_action_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__action_id
+msgid "Action"
+msgstr "Action"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__group_by_id
+msgid "Action Group By"
+msgstr "Groupe d'action par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__action_line_ids
+msgid "Action Line"
+msgstr "Ligne d'action"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_needaction
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__previous_period_comparision
+msgid "Activate/deactivate previous comparison in KPI layout."
+msgstr ""
+"Activer/désactiver la comparaison précédente dans la présentation KPI."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__active
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__active_record
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Active"
+msgstr "Actif"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__todo_layout__activity
+msgid "Activity"
+msgstr "Activité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_exception_decoration
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité Exception Décoration"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_state
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_state
+msgid "Activity State"
+msgstr "État d'activité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_type_icon
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.to_do_layout
+msgid "Activity:"
+msgstr "Activité:"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Add/Update Users"
+msgstr "Ajouter/mettre à jour des utilisateurs"
+
+#. module: synconics_bi_dashboard
+#: model:res.groups,name:synconics_bi_dashboard.group_dashboard_manager
+msgid "Administrator"
+msgstr "Administrateur"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Advanced Configuration"
+msgstr "Configuration avancée"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.category,description:synconics_bi_dashboard.module_category_dashboard
+msgid "Allows you to manage your Dashboard."
+msgstr "Vous permet de gérer votre tableau de bord."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__animated
+msgid "Animated"
+msgstr "Animé"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__is_apply_multiplier
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Apply Multiplier"
+msgstr "Appliquer un multiplicateur"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Archive"
+msgstr "Archive"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__area_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__area_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Area Chart"
+msgstr "Graphique en aires"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sort_order__asc
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__sort_order__asc
+msgid "Ascending"
+msgstr "Ascendant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_attachment_count
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Auto Update"
+msgstr "Mise à jour automatique"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__auto_reload_duration
+msgid "Auto-Refresh Interval"
+msgstr "Intervalle de rafraîchissement automatique"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__is_automated
+msgid "Automated Email"
+msgstr "E-mail automatisé"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__data_type__average
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_data_type__average
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__list_fields__value_type__avg
+msgid "Average"
+msgstr "Moyenne"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.category,name:synconics_bi_dashboard.module_category_dashboard
+#: model:ir.ui.menu,name:synconics_bi_dashboard.parent_dashboard_menu
+msgid "BI Dashboard"
+msgstr "Tableau de bord BI"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__background_color
+msgid "Background Color"
+msgstr "Couleur d'arrière-plan"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__bar_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__bar_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Bar Chart"
+msgstr "Graphique à barres"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_border_color
+msgid "Border Color"
+msgstr "Couleur de la bordure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_border_type
+msgid "Border Type"
+msgstr "Type de bordure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_border_width
+msgid "Border Width"
+msgstr "Largeur de la bordure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_border_type__bottom
+msgid "Bottom"
+msgstr "Bas"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_access_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__text_align__center
+msgid "Center"
+msgstr "Centre"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__chart_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__chart_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Chart"
+msgstr "Graphique"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__chart_count
+msgid "Chart Count"
+msgstr "Nombre de graphiques"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_chart_multiplier
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__chart_multiplier_ids
+msgid "Chart Multiplier"
+msgstr "Multiplicateur de graphique"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,name:synconics_bi_dashboard.dashboard_chart_action
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__chart_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__chart_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__chart_ids
+#: model:ir.ui.menu,name:synconics_bi_dashboard.dashboard_chart_menu
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Charts"
+msgstr "Graphiques"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__column_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__column_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Column Chart"
+msgstr "Graphique à colonnes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__company_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__company_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_filter
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__company_id
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__company_id
+msgid "Company related records."
+msgstr "Dossiers liés à l'entreprise."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_comparison_type
+msgid "Comparison Type"
+msgstr "Type de comparaison"
+
+#. module: synconics_bi_dashboard
+#: model:ir.ui.menu,name:synconics_bi_dashboard.dashboard_configuration_menu
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_access_view
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__data_type__count
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_data_type__count
+msgid "Count"
+msgstr "Compter"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Create/Update Menu"
+msgstr "Menu Créer/Mettre à jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__create_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__create_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__icon_option__custom
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__unit_type__custom
+msgid "Custom"
+msgstr "Coutume"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__custom_unit
+msgid "Custom Unit"
+msgstr "Unité personnalisée"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_dashboard_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__dashboard_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__dashboard_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__dashboard_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__dashboard_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_filter
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_dashboard_access
+msgid "Dashboard Access"
+msgstr "Accès au tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_dashboard_chart
+msgid "Dashboard Charts"
+msgstr "Graphiques du tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:mail.template,name:synconics_bi_dashboard.mail_template_dashboard_chart
+msgid "Dashboard Layout Email"
+msgstr "E-mail de présentation du tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_dashboard_mail
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__dashboard_mail_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__dashboard_mail_id
+msgid "Dashboard Mail"
+msgstr "Courrier du tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Dashboard Preview"
+msgstr "Aperçu du tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:mail.template,subject:synconics_bi_dashboard.mail_template_dashboard_chart
+msgid "Dashboard: {{ ctx.get('name') }}"
+msgstr "Tableau de bord : {{ ctx.get('name') }}"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,name:synconics_bi_dashboard.dashboard_dashboard_action
+#: model:ir.ui.menu,name:synconics_bi_dashboard.dashboard_dashboard_menu
+msgid "Dashboards"
+msgstr "Tableaux de bord"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Data"
+msgstr "Données"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__data_type
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Data Type"
+msgstr "Type de données"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_data_type
+msgid "Data Type "
+msgstr "Type de données"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Data2"
+msgstr "Données2"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Date Default Filter"
+msgstr "Filtre par défaut de date"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_date_filter_field_id
+msgid "Date Filter"
+msgstr "Filtre de dates"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__date_filter_field_id
+msgid "Date Filter Field"
+msgstr "Champ de filtre de date"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__date_filter_option
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Date Filter Options"
+msgstr "Options de filtre de dates"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_date_filter_option
+msgid "Date Filter Options "
+msgstr "Options de filtre de dates"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sub_time_range__day
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__time_range__day
+msgid "Day"
+msgstr "Jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__icon_option__default
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__todo_layout__default
+msgid "Default"
+msgstr "Défaut"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__default_icon
+msgid "Default Icon"
+msgstr "Icône par défaut"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Delete Menu"
+msgstr "Supprimer le menu"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sort_order__desc
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__sort_order__desc
+msgid "Descending"
+msgstr "Descendant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__display_name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__domain
+msgid "Domain"
+msgstr "Domaine"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_domain
+msgid "Domain "
+msgstr "Domaine"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__doughnut_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__doughnut_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Doughnut Chart"
+msgstr "Graphique en beignet"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Email"
+msgstr "E-mail"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Assistant de composition d'e-mails"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__is_kpi_border
+msgid "Enable Border"
+msgstr "Activer la bordure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_enable_target
+msgid "Enable Target"
+msgstr "Activer la cible"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__field_id
+msgid "Field"
+msgstr "Champ"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__list_measure_id
+msgid "Field "
+msgstr "Champ"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__sub_group_by_type
+msgid "Field Type"
+msgstr "Type de champ"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__list_field_id
+msgid "Fields"
+msgstr "Champs"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_follower_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_partner_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (partenaires)"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__font_color
+msgid "Font Color"
+msgstr "Couleur de police"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__font_size
+msgid "Font Size"
+msgstr "Taille de la police"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__font_weight
+msgid "Font Weight"
+msgstr "Poids de la police"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__activity_type_icon
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône géniale de police, par exemple. tâches fat"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__frozen
+msgid "Frozen"
+msgstr "Congelé"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__funnel_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__funnel_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Funnel Chart"
+msgstr "Graphique en entonnoir"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__future_starting_now
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__future_starting_now
+msgid "Future Starting Now"
+msgstr "L'avenir commence maintenant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__future_starting_today
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__future_starting_today
+msgid "Future Starting Today"
+msgstr "L'avenir commence aujourd'hui"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__future_starting_tomorrow
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__future_starting_tomorrow
+msgid "Future Starting Tomorrow"
+msgstr "L'avenir commence demain"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__grid_stack_dimensions
+msgid "Grid Stack Dimensions"
+msgstr "Dimensions de la pile de grille"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__group_by_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_filter
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__group_by_type
+msgid "Group By Type"
+msgstr "Regrouper par type"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__time_range
+msgid "Group by Time Range"
+msgstr "Regrouper par plage horaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__list_type__grouped
+msgid "Grouped"
+msgstr "Groupé"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__has_message
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__hide_false_value
+msgid "Hide False"
+msgstr "Masquer faux"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__id
+msgid "ID"
+msgstr "IDENTIFIANT"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_exception_icon
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__icon
+msgid "Icon "
+msgstr "Icône"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__icon_option
+msgid "Icon Option"
+msgstr "Option d'icône"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__activity_exception_icon
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__message_needaction
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Si cette case est cochée, les nouveaux messages nécessitent votre attention."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__message_has_error
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__message_has_sms_error
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__message_has_error
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__limit_record
+msgid "If you will change it to 0 (zero) then it will consider all records"
+msgstr ""
+"Si vous le changez à 0 (zéro), alors il prendra en compte tous les "
+"enregistrements"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__image
+msgid "Image"
+msgstr "Image"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__include_periods
+msgid "Include Period"
+msgstr "Inclure la période"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_include_periods
+msgid "Include Period "
+msgstr "Inclure la période"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_ir_ui_menu__is_dashboard
+msgid "Is Dashboard Menu"
+msgstr "Est-ce que le menu du tableau de bord"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_is_follower
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_is_follower
+msgid "Is Follower"
+msgstr "Est un suiveur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__item_view_action_ids
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Item Actions"
+msgstr "Actions sur les éléments"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_item_view_action
+msgid "Item View Action"
+msgstr "Action d'affichage de l'élément"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__kpi
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "KPI"
+msgstr "KPI"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__kelly
+msgid "Kelly"
+msgstr "Kelly"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_thirty_days
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_thirty_days
+msgid "Last 30 Days"
+msgstr "30 derniers jours"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_year_days
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_year_days
+msgid "Last 365 Days"
+msgstr "365 derniers jours"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_day
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_day
+msgid "Last Day"
+msgstr "Dernier jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__item_action_id
+msgid "Last Item Action"
+msgstr "Action du dernier élément"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_month
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_month
+msgid "Last Month"
+msgstr "Mois dernier"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_ninety_days
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_ninety_days
+msgid "Last Ninety Days"
+msgstr "Quatre-vingt-dix derniers jours"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_quarter
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_quarter
+msgid "Last Quarter"
+msgstr "Dernier trimestre"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_seven_days
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_seven_days
+msgid "Last Seven Days"
+msgstr "Sept derniers jours"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__write_uid
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__write_date
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_week
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_week
+msgid "Last Week"
+msgstr "La semaine dernière"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__last_year
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__last_year
+msgid "Last Year"
+msgstr "L'année dernière"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__layout_type
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__layout_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Layout"
+msgstr "Mise en page"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__tile_layout_type
+msgid "Layout "
+msgstr "Mise en page"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__layout_type__layout1
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__tile_layout_type__layout1
+msgid "Layout 1"
+msgstr "Disposition 1"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__layout_type__layout2
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__tile_layout_type__layout2
+msgid "Layout 2"
+msgstr "Disposition 2"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__layout_type__layout3
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__tile_layout_type__layout3
+msgid "Layout 3"
+msgstr "Disposition 3"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__layout_type__layout4
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__tile_layout_type__layout4
+msgid "Layout 4"
+msgstr "Disposition 4"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__layout_type__layout5
+msgid "Layout 5"
+msgstr "Disposition 5"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_border_type__left
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__text_align__left
+msgid "Left"
+msgstr "Gauche"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_limit_record
+msgid "Limit Record"
+msgstr "Limiter l'enregistrement"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__line_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__line_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Line Chart"
+msgstr "Graphique linéaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_list_fields
+msgid "List Fields"
+msgstr "Champs de liste"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__list_measure_ids
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "List Measure Fields"
+msgstr "Répertorier les champs de mesure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__list_field_ids
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "List Standard Fields"
+msgstr "Liste des champs standard"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__list_type
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "List Type"
+msgstr "Type de liste"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__list
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "List View"
+msgstr "Vue en liste"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__mail_cron_id
+msgid "Mail Cron Job"
+msgstr "Tâche Cron de messagerie"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__mail_template_id
+msgid "Mail Template"
+msgstr "Modèle de courrier"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__map_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Map Chart"
+msgstr "Graphique cartographique"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__map_group_by_id
+msgid "Map Group by"
+msgstr "Regrouper la carte par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__material
+msgid "Material"
+msgstr "Matériel"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__measure_id
+msgid "Measure"
+msgstr "Mesure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__measurement_field_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Measure Field"
+msgstr "Champ de mesure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_measurement_field_id
+msgid "Measure Field "
+msgstr "Champ de mesure"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__measurement_field_ids
+msgid "Measurements"
+msgstr "Mesures"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_ir_ui_menu
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__created_menu_id
+msgid "Menu"
+msgstr "Menu"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__menu_active
+msgid "Menu Active"
+msgstr "Menu Actif"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_has_error
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison du message"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__meter_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Meter Chart"
+msgstr "Tableau des compteurs"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__model_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__model_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__model_id
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Model"
+msgstr "Modèle"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_model_id
+msgid "Model "
+msgstr "Modèle"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_model
+msgid "Model Ref"
+msgstr "Modèle Réf"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__model
+msgid "Model Ref."
+msgstr "Modèle Réf."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_ir_model
+msgid "Models"
+msgstr "Modèles"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__unit_type__monetary
+msgid "Monetary"
+msgstr "Monétaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sub_time_range__month
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__time_range__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__month_to_date
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__month_to_date
+msgid "Month To Date"
+msgstr "Le mois courant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__moonrise
+msgid "Moonrise"
+msgstr "Lever de lune"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__dashboard_mail_ids
+msgid ""
+"Multiple different charts can be shared on mail to multiple different users."
+msgstr ""
+"Plusieurs graphiques différents peuvent être partagés par courrier avec "
+"plusieurs utilisateurs différents."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__multiplier
+msgid "Multiplier"
+msgstr "Multiplicateur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__field_id
+msgid "Multiplier field"
+msgstr "Champ multiplicateur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__my_activity_date_deadline
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Date limite de mon activité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__name
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Name ..."
+msgstr "Nom ..."
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.to_do_layout
+msgid "Name:"
+msgstr "Nom:"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_calendar_event_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Prochain événement du calendrier d'activités"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_date_deadline
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_summary
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de l'activité suivante"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_type_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activité suivant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__next_day
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__next_day
+msgid "Next Day"
+msgstr "Lendemain"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__next_month
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__next_month
+msgid "Next Month"
+msgstr "Mois prochain"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__next_quarter
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__next_quarter
+msgid "Next Quarter"
+msgstr "Trimestre prochain"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__next_week
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__next_week
+msgid "Next Week"
+msgstr "La semaine prochaine"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__next_year
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__next_year
+msgid "Next Year"
+msgstr "L'année prochaine"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.actions.act_window,help:synconics_bi_dashboard.dashboard_chart_action
+msgid "No Charts were found."
+msgstr "Aucun graphique n'a été trouvé."
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.actions.act_window,help:synconics_bi_dashboard.dashboard_dashboard_action
+msgid "No Dashboards or were found."
+msgstr "Aucun tableau de bord n'a été trouvé."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__none
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_border_type__none
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_comparison_type__none
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__none
+msgid "None"
+msgstr "Aucun"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_needaction_counter
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_has_error_counter
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__message_needaction_counter
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__message_has_error_counter
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__value_type
+msgid "Operation Type"
+msgstr "Type d'opération"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__parent_menu_id
+msgid "Parent Menu"
+msgstr "Menu Parents"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__past_excluding_today
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__past_excluding_today
+msgid "Past Excluding Today"
+msgstr "Passé sans aujourd'hui"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__past_till_now
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__past_till_now
+msgid "Past Till Now"
+msgstr "Passé jusqu'à maintenant"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_comparison_type__percentage
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__previous_period_type__percentage
+msgid "Percentage"
+msgstr "Pourcentage"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__pie_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__pie_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Pie Chart"
+msgstr "Graphique circulaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__previous_period_comparision
+msgid "Previous Period Comparison"
+msgstr "Comparaison des périodes précédentes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__previous_period_duration
+msgid "Previous Period Duration"
+msgstr "Durée de la période précédente"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__previous_period_type
+msgid "Previous Period Type"
+msgstr "Type de période précédente"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_view_type__progress
+msgid "Progress"
+msgstr "Progrès"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__access_by
+msgid "Provide dashboard to individual user's or user group's"
+msgstr ""
+"Fournir un tableau de bord à un utilisateur individuel ou à un groupe "
+"d'utilisateurs"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__pyramid_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__pyramid_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Pyramid Chart"
+msgstr "Graphique pyramidal"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sub_time_range__quarter
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__time_range__quarter
+msgid "Quarter"
+msgstr "Quart"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__quarter_to_date
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__quarter_to_date
+msgid "Quarter To Date"
+msgstr "Trimestre à ce jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__radar_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__radar_chart
+msgid "Radar Chart"
+msgstr "Carte radar"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__radial_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__radial_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Radial Chart"
+msgstr "Graphique radial"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__rating_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__rating_ids
+msgid "Ratings"
+msgstr "Notes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_comparison_type__ratio
+msgid "Ratio"
+msgstr "Rapport"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_mail__recipient_ids
+msgid "Recipients"
+msgstr "Destinataires"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__limit_record
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__limit_record
+msgid "Record Limit"
+msgstr "Limite d'enregistrement"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__is_remove
+msgid "Remove Access?"
+msgstr "Supprimer l'accès ?"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.to_do_layout
+msgid "Rep.:"
+msgstr "Représentant.:"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__activity_user_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_border_type__right
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__text_align__right
+msgid "Right"
+msgstr "Droite"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__message_has_sms_error
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur de livraison SMS"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__same_period_previous_years
+msgid "Same Period Previous Years"
+msgstr "Même période Années précédentes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_same_period_previous_years
+msgid "Same Period Previous Years "
+msgstr "Même période Années précédentes"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__scatter_chart
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__scatter_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Scatter Chart"
+msgstr "Graphique à nuages ​​de points"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__todo_layout
+msgid "Select To Do action."
+msgstr "Sélectionnez Action à faire."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__list_field_ids
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__list_measure_ids
+msgid "Select and add column fields for the standard list view."
+msgstr ""
+"Sélectionnez et ajoutez des champs de colonne pour la vue de liste standard."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__list_type
+msgid "Select group type."
+msgstr "Sélectionnez le type de groupe."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__time_range
+msgid "Select time range on selected Group by Date option."
+msgstr ""
+"Sélectionnez la plage horaire sur l’option Regrouper par date sélectionnée."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__sub_time_range
+msgid "Select time range on selected Sub-Group by Date option."
+msgstr ""
+"Sélectionnez la plage horaire sur l’option Sous-groupe par date "
+"sélectionnée."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__unit_type
+msgid "Select unit type for axis."
+msgstr "Sélectionnez le type d'unité pour l'axe."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__group_ids
+msgid "Select user access group for accessing dashboard."
+msgstr ""
+"Sélectionnez le groupe d’accès utilisateur pour accéder au tableau de bord."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__user_ids
+msgid "Select user's for accessing dashboard."
+msgstr "Sélectionnez l'utilisateur pour accéder au tableau de bord."
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_form_view
+msgid "Send by Email"
+msgstr "Envoyer par email"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__menu_sequence
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_fields__sequence
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__sequence
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_todo_action__action_line_ids
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_todo_action_line__active_record
+msgid "Set Action Line For To Do Actions."
+msgstr "Définir la ligne d'action pour les actions à effectuer."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_fields__value_type
+msgid "Set Field Value Type"
+msgstr "Définir le type de valeur du champ"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__todo_action_ids
+msgid "Set action for information purpose."
+msgstr "Définir l'action à des fins d'information."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__custom_unit
+msgid "Set custom unit type on 'Y' axis."
+msgstr "Définissez le type d'unité personnalisée sur l'axe « Y »."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__font_size
+msgid "Set font size for Tile"
+msgstr "Définir la taille de la police pour Tile"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__font_weight
+msgid "Set font thickness for Tile"
+msgstr "Définir l'épaisseur de la police pour Tile"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__image
+msgid "Set image for mail"
+msgstr "Définir l'image pour le courrier"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__previous_period_duration
+msgid ""
+"Set the value integer to be compared with the configured date filter for the KPI layout. \n"
+" For e.g. In date filter it is set to 'This Year' and if you set the value to 2 then 'This year' records will be compared with 2 years back previous records"
+msgstr ""
+"Définissez la valeur entière à comparer avec le filtre de date configuré pour la présentation KPI. \n"
+" Par ex. Dans le filtre de date, il est défini sur « Cette année » et si vous définissez la valeur sur 2, les enregistrements « Cette année » seront comparés aux enregistrements précédents de 2 ans."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__show_unit
+msgid "Set unit type on axis."
+msgstr "Définissez le type d’unité sur l’axe."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__show_unit
+msgid "Show Unit"
+msgstr "Afficher l'unité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__sort_order
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__sort_order
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Sort Order"
+msgstr "Ordre de tri"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__sort_field_id
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__sort_field_id
+msgid "Sort With"
+msgstr "Trier avec"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__theme__spirited
+msgid "Spirited"
+msgstr "Fougueux"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__stackedcolumn_chart
+msgid "StackedColumn"
+msgstr "Colonne empilée"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__item_view_action__chart_type__stackedcolumn_chart
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "StackedColumn Chart"
+msgstr "Graphique à colonnes empilées"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_view_type__standard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__list_type__standard
+msgid "Standard"
+msgstr "Standard"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__activity_state
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date de l'activité est aujourd'hui\n"
+"Prévu : Activités futures."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__sub_group_by_id
+msgid "Sub Group By"
+msgstr "Sous-groupe par"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__sub_time_range
+msgid "Sub Group by Time Range"
+msgstr "Sous-groupe par plage horaire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__data_type__sum
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_comparison_type__sum
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_data_type__sum
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__list_fields__value_type__sum
+msgid "Sum"
+msgstr "Somme"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.to_do_layout
+msgid "Summary:"
+msgstr "Résumé:"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__todo_action_ids
+msgid "TODO Actions"
+msgstr "Actions À FAIRE"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__meter_target
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_chart_form_view
+msgid "Target"
+msgstr "Cible"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_target_value
+msgid "Target Value"
+msgstr "Valeur cible"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action_line__name
+msgid "Task"
+msgstr "Tâche"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__text_align
+msgid "Text Align"
+msgstr "Aligner le texte"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__theme
+msgid "Theme"
+msgstr "Thème"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__this_month
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__this_month
+msgid "This Month"
+msgstr "Ce mois-ci"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__this_quarter
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__this_quarter
+msgid "This Quarter"
+msgstr "Ce trimestre"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__this_week
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__this_week
+msgid "This Week"
+msgstr "Cette semaine"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__this_year
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__this_year
+msgid "This Year"
+msgstr "Cette année"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__tile
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Tile View"
+msgstr "Vue en mosaïque"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_todo_action__name
+msgid "Title"
+msgstr "Titre"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__chart_type__to_do
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "To Do"
+msgstr "Faire"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_todo_action
+msgid "To Do Actions"
+msgstr "Actions à effectuer"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_todo_action_line
+msgid "To Do Actions Line"
+msgstr "Ligne d'actions à effectuer"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__todo_layout
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "To Do Layout"
+msgstr "Mise en page des tâches"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__today
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__today
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_border_type__top
+msgid "Top"
+msgstr "Haut"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__button_color
+msgid "Top Button Color"
+msgstr "Couleur du bouton supérieur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__chart_type
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_item_view_action__chart_type
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.view_dashboard_chart_filter
+msgid "Type"
+msgstr "Taper"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__activity_exception_decoration
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d’activité exceptionnelle enregistrée."
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__unit_type
+msgid "Unit Type"
+msgstr "Type d'unité"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__used_list_field_ids
+msgid "Used List Ids"
+msgstr "Identifiants de liste utilisés"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_res_users
+#: model:res.groups,name:synconics_bi_dashboard.group_dashboard_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,name:synconics_bi_dashboard.action_dashboard_access
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_access_view
+msgid "User Access"
+msgstr "Accès utilisateur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__user_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__user_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_ir_ui_menu__user_ids
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_access__access_by__user
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_dashboard__access_by__user
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__previous_period_type__value
+msgid "Value"
+msgstr "Valeur"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__kpi_view_type
+msgid "View"
+msgstr "Voir"
+
+#. module: synconics_bi_dashboard
+#: model_terms:ir.ui.view,arch_db:synconics_bi_dashboard.dashboard_dashboard_tree_view
+msgid "View Charts"
+msgstr "Afficher les graphiques"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_chart__website_message_ids
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_dashboard__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site Web"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_chart__website_message_ids
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_dashboard__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications du site Web"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sub_time_range__week
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__time_range__week
+msgid "Week"
+msgstr "Semaine"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__week_to_date
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__week_to_date
+msgid "Week To Date"
+msgstr "Semaine à ce jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__sub_time_range__year
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__time_range__year
+msgid "Year"
+msgstr "Année"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__date_filter_option__year_to_date
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__dashboard_chart__kpi_date_filter_option__year_to_date
+msgid "Year To Date"
+msgstr "Année à ce jour"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_fields__list_field_id
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_fields__list_measure_id
+msgid "add column fields for the standard list view"
+msgstr "ajouter des champs de colonne pour la vue de liste standard"
