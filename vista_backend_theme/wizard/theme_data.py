@@ -307,6 +307,16 @@ class ThemeData(models.TransientModel):
                     'vista_backend_theme/static/src/img/icons/bi-dashboard.png')
                 menu.write({'web_icon_data': base64.b64encode(
                     open(img_path, "rb").read())})
+            if menu.name == 'Subscriptions':
+                img_path = odoo.tools.misc.file_path(
+                    'vista_backend_theme/static/src/img/icons/subscriptions.png')
+                menu.write({'web_icon_data': base64.b64encode(
+                    open(img_path, "rb").read())})
+            if menu.name == 'Commissions':
+                img_path = odoo.tools.misc.file_path(
+                    'vista_backend_theme/static/src/img/icons/commissions.png')
+                menu.write({'web_icon_data': base64.b64encode(
+                    open(img_path, "rb").read())})
 
     def icon_change_theme_green(self):
         """Create a change icon theme green"""
@@ -486,6 +496,16 @@ class ThemeData(models.TransientModel):
             if menu.name == 'Accounting':
                 img_path = odoo.tools.misc.file_path(
                     'vista_backend_theme/static/src/img/icons_green/accounting.png')
+                menu.write({'web_icon_data': base64.b64encode(
+                    open(img_path, "rb").read())})
+            if menu.name == 'Subscriptions':
+                img_path = odoo.tools.misc.file_path(
+                    'vista_backend_theme/static/src/img/icons/subscriptions.png')
+                menu.write({'web_icon_data': base64.b64encode(
+                    open(img_path, "rb").read())})
+            if menu.name == 'Commissions':
+                img_path = odoo.tools.misc.file_path(
+                    'vista_backend_theme/static/src/img/icons/commissions.png')
                 menu.write({'web_icon_data': base64.b64encode(
                     open(img_path, "rb").read())})
 

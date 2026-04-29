@@ -40,9 +40,10 @@ MENU_ICONS = {
     'Knowledge': 'knowledge.png',
     'Expenses': 'expenses.png',
     'LLM': 'llm.png',
-    'Inventory': 'inventory.png',
     'Job Queue': 'job-queue.png',
-    'BI Dashbord': 'bi-dashboard.png',
+    'BI Dashboard': 'bi-dashboard.png',
+    'Subscriptions': 'subscriptions.png',
+    'Commissions': 'commissions.png',
 }
 
 POST_MENU_ICONS = dict(MENU_ICONS, **{'Accounting': 'accounting.png'})
