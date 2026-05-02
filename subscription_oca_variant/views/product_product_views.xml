@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue product.product (variante) : form view via product.product.form.view
+         qui est le form view standard des variantes accessible depuis
+         product.template via l'onglet Variantes -->
+    <record id="product_product_form_view_subscription_variant" model="ir.ui.view">
+        <field name="name">product.product.sub.variant.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group
+                    string="Abonnement"
+                    invisible="not product_tmpl_id.subscribable"
+                >
+                    <field name="subscription_template_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="product_product_form_view_subscription_variant" model="ir.ui.view">
+        <field name="name">product.product.sub.variant.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_tag_ids']" position="after">
+                <field name="subscription_template_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

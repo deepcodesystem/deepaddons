@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Masquer subscription_template_id sur product.template
+         car il est désormais défini au niveau de la variante.
+         Le champ reste disponible en fallback via le modèle Python. -->
+    <record id="product_template_subscription_variant_hide" model="ir.ui.view">
+        <field name="name">product.template.sub.variant.hide</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="subscription_oca.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='subscription_template_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='subscribable']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <div name="options" position='inside'>
+                <span class="d-inline-flex" invisible="type == 'combo'">
+                    <field name="subscribable" />
+                    <label for="subscribable" string="Subscription" />
+                </span>
+            </div>
+        </field>
+    </record>
+</odoo>
+
