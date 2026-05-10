@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_inherit_l10n_ma_origin_partner" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.l10n_ma_origin_partner</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <!-- Affiche le client réel (origine) sous le partenaire de facturation -->
+            <xpath expr="//field[@name='partner_shipping_id']" position="before">
+                <field name="l10n_ma_origin_partner_id"
+                       string="Client réel (origine)"
+                       readonly="1"
+                       invisible="not l10n_ma_origin_partner_id"
+                       options="{'no_open': False}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Ajout de la colonne "Client réel" dans la liste des factures -->
+    <record id="view_invoice_tree_inherit_l10n_ma" model="ir.ui.view">
+        <field name="name">account.move.list.inherit.l10n_ma_origin_partner</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_partner_display_name'][last()]" position="after">
+                <field name="l10n_ma_origin_partner_id"
+                       string="Client réel (origine)"
+                       optional="show"
+                       readonly="1"
+                       column_invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund', 'out_receipt')"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_invoice_split_wizard_form" model="ir.ui.view">
+        <field name="name">sale.invoice.split.wizard.form</field>
+        <field name="model">sale.invoice.split.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Fractionner les factures (≤ 5000 DH)">
+                <sheet>
+                    <group>
+                        <group string="Bon de commande">
+                            <field name="sale_order_id" readonly="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group string="Paramètres">
+                            <field name="limit_amount"/>
+                            <field name="invoice_count" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Partenaire de facturation">
+                        <field name="invoice_partner_id"
+                               placeholder="Laisser vide pour garder le client de la commande"
+                               options="{'no_quick_create': True}"/>
+                        <div class="text-muted" colspan="2"
+                             invisible="not invoice_partner_id">
+                            Le client réel de la commande sera conservé dans le champ
+                            <strong>Client réel (origine)</strong> de chaque facture.
+                        </div>
+                    </group>
+                    <div class="alert alert-warning" role="alert"
+                         invisible="not warning_message">
+                        <field name="warning_message" nolabel="1"/>
+                    </div>
+                    <div class="alert alert-info" role="alert"
+                         invisible="invoice_count == 0">
+                        <p>
+                            <strong><field name="invoice_count" nolabel="1"/></strong>
+                            facture(s) en brouillon seront créées, chacune ≤
+                            <field name="limit_amount" nolabel="1"/> DH TTC
+                            (règle espèces législation marocaine).
+                        </p>
+                    </div>
+                    <div class="alert alert-danger" role="alert"
+                         invisible="invoice_count != 0">
+                        <p>Aucune ligne à facturer sur ce bon de commande.</p>
+                    </div>
+                </sheet>
+                <footer>
+                    <button name="action_create_invoices"
+                            string="Créer les factures"
+                            type="object"
+                            class="btn-primary"
+                            invisible="invoice_count == 0"/>
+                    <button string="Annuler" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
+

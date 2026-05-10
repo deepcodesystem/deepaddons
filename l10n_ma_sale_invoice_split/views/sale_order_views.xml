@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_invoice_split" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.invoice.split.ma</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@id='create_invoice']" position="after">
+                <button name="action_split_invoice_5000"
+                        string="Fractionner ≤ 5000 DH"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state not in ('sale', 'done') or invoice_status == 'invoiced'"
+                        title="Créer plusieurs factures (limite 5000 DH - paiement espèces, législation marocaine)"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
