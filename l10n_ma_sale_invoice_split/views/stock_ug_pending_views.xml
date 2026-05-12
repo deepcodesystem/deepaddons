@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_stock_ug_pending" model="ir.actions.act_window">
+        <field name="name">UG Livrés en attente</field>
+        <field name="res_model">stock.ug.pending</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('qty_pending', '>', 0)]</field>
+        <field name="context">{'search_default_group_product': 1}</field>
+    </record>
+
+    <record id="action_stock_ug_pending_all" model="ir.actions.act_window">
+        <field name="name">Historique UG</field>
+        <field name="res_model">stock.ug.pending</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_stock_ug_pending_list" model="ir.ui.view">
+        <field name="name">stock.ug.pending.list</field>
+        <field name="model">stock.ug.pending</field>
+        <field name="arch" type="xml">
+            <list string="UG Livrés en attente" decoration-success="qty_pending == 0" decoration-warning="qty_pending > 0">
+                <field name="date"/>
+                <field name="product_id"/>
+                <field name="partner_id"/>
+                <field name="sale_order_id"/>
+                <field name="qty_done" string="Livré"/>
+                <field name="qty_invoiced" string="Facturé"/>
+                <field name="qty_pending" string="En attente" decoration-warning="qty_pending > 0"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_stock_ug_pending_form" model="ir.ui.view">
+        <field name="name">stock.ug.pending.form</field>
+        <field name="model">stock.ug.pending</field>
+        <field name="arch" type="xml">
+            <form string="UG Livré">
+                <sheet>
+                    <group>
+                        <group string="Produit">
+                            <field name="product_id"/>
+                            <field name="date"/>
+                        </group>
+                        <group string="Origine">
+                            <field name="partner_id"/>
+                            <field name="sale_order_id"/>
+                            <field name="stock_move_id"/>
+                        </group>
+                    </group>
+                    <group string="Quantités">
+                        <field name="qty_done"/>
+                        <field name="qty_invoiced"/>
+                        <field name="qty_pending"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_stock_ug_pending_search" model="ir.ui.view">
+        <field name="name">stock.ug.pending.search</field>
+        <field name="model">stock.ug.pending</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="partner_id"/>
+                <field name="sale_order_id"/>
+                <filter name="pending_only" string="En attente" domain="[('qty_pending', '>', 0)]"/>
+                <group expand="0" string="Regrouper par">
+                    <filter name="group_product" string="Produit" context="{'group_by': 'product_id'}"/>
+                    <filter name="group_partner" string="Client" context="{'group_by': 'partner_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Menu sous Inventaire > Opérations -->
+    <menuitem id="menu_stock_ug_pending"
+              name="UG Livrés en attente"
+              parent="stock.menu_stock_warehouse_mgmt"
+              action="action_stock_ug_pending"
+              sequence="99"/>
+</odoo>
+

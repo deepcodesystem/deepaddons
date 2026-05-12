@@ -26,6 +26,17 @@
                             <strong>Client réel (origine)</strong> de chaque facture.
                         </div>
                     </group>
+                    <group string="Mode Campagne">
+                        <field name="campaign_mode"/>
+                        <field name="ug_pending_count" readonly="1" invisible="not campaign_mode"/>
+                        <div class="text-muted" colspan="2" invisible="not campaign_mode or ug_pending_count == 0">
+                            1 unité gratuite (prix 0) sera ajoutée dans la <strong>première facture</strong> uniquement.
+                        </div>
+                        <div class="alert alert-warning" role="alert"
+                             invisible="not campaign_mode or ug_pending_count != 0">
+                            Aucun produit UG en attente dans le stock tampon.
+                        </div>
+                    </group>
                     <div class="alert alert-warning" role="alert"
                          invisible="not warning_message">
                         <field name="warning_message" nolabel="1"/>

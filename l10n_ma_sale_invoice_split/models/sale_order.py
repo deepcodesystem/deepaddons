@@ -15,3 +15,6 @@ class SaleOrder(models.Model):
             'context': {'default_sale_order_id': self.id},
         }
 
+    def _get_invoiceable_lines(self, final=False):
+        lines = super()._get_invoiceable_lines(final=final)
+        return lines.filtered(lambda l: not l.product_id.is_ug)
