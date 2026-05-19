@@ -33,9 +33,11 @@ class SaleInvoiceSplitWizard(models.TransientModel):
 
     @api.depends('campaign_mode')
     def _compute_ug_pending_count(self):
-        count = self.env['stock.ug.pending'].search_count([('qty_pending', '>', 0)])
+        # Calculer la somme totale des quantités en attente (pas le nombre d'enregistrements)
+        pendings = self.env['stock.ug.pending'].search([('qty_pending', '>', 0)])
+        total_qty = sum(pendings.mapped('qty_pending'))
         for wiz in self:
-            wiz.ug_pending_count = count
+            wiz.ug_pending_count = int(total_qty)
 
     @api.model
     def default_get(self, fields_list):
@@ -157,13 +159,6 @@ class SaleInvoiceSplitWizard(models.TransientModel):
         order = self.sale_order_id
         created = self.env['account.move']
 
-        # Mode campagne : récupérer le prochain UG pending (FIFO)
-        ug_pending = False
-        if self.campaign_mode:
-            ug_pending = self.env['stock.ug.pending']._get_next_pending()
-            if not ug_pending:
-                raise UserError(_("Mode Campagne : aucun produit UG en attente dans le stock tampon."))
-
         for idx_inv, invoice_lines in enumerate(split):
             move_vals = order._prepare_invoice()
             move_vals.pop('invoice_line_ids', None)
@@ -183,20 +178,23 @@ class SaleInvoiceSplitWizard(models.TransientModel):
                 vals = ol._prepare_invoice_line(sequence=idx, quantity=item['qty'])
                 line_vals_list.append((0, 0, vals))
 
-            # Injection du UG uniquement dans la première facture
-            if ug_pending and idx_inv == 0:
-                line_vals_list.append((0, 0, {
-                    'product_id': ug_pending.product_id.id,
-                    'quantity': 1,
-                    'price_unit': 0.0,
-                    'name': _('%s (Unité Gratuite - Campagne)') % ug_pending.product_id.display_name,
-                    'sequence': len(invoice_lines) + 1,
-                }))
+            # Injection du UG dans chaque facture en mode campagne (si disponible)
+            ug_pending = False
+            if self.campaign_mode:
+                ug_pending = self.env['stock.ug.pending']._get_next_pending()
+                if ug_pending:
+                    line_vals_list.append((0, 0, {
+                        'product_id': ug_pending.product_id.id,
+                        'quantity': 1,
+                        'price_unit': 0.0,
+                        'name': _('%s (Unité Gratuite - Campagne)') % ug_pending.product_id.display_name,
+                        'sequence': len(invoice_lines) + 1,
+                    }))
 
             move.write({'invoice_line_ids': line_vals_list})
 
             # Consommer le UG pending après écriture de la facture
-            if ug_pending and idx_inv == 0:
+            if ug_pending:
                 ug_pending._consume(1)
 
             created |= move
