@@ -1,0 +1,720 @@
+// Albirru Backend Theme - Quick Settings Styles
+// Compatible with Odoo 19
+// Comprehensive styling for both Light and Dark modes
+
+// Quick Settings Dropdown Toggle
+.albirru-quick-settings {
+    .dropdown-toggle {
+        color: var(--albirru-navbar-text) !important;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+// =============================================
+// Settings Dropdown Menu - LIGHT MODE (Default)
+// IMPORTANT: Override navbar text color that bleeds into dropdown
+// =============================================
+.o_main_navbar .albirru-settings-dropdown,
+.albirru-settings-dropdown {
+    z-index: 1050 !important;
+
+    // Reset ALL text colors inside dropdown (override navbar !important rules)
+    &,
+    & *,
+    & span,
+    & button,
+    & a,
+    & .tab-btn,
+    & .style-option,
+    & .font-option,
+    & .layout-option,
+    & .btn-chatter,
+    & .setting-group-title,
+    & .setting-label {
+        color: #212529 !important;
+    }
+
+    min-width: 320px;
+    max-width: 360px;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+    background: #ffffff !important;
+
+    // Header
+    .settings-header {
+        padding: 12px 16px;
+        background: var(--albirru-primary);
+        color: #ffffff;
+
+        h6 {
+            font-weight: 600;
+            color: #ffffff !important;
+            margin: 0;
+        }
+
+        .form-check-input {
+            // OFF State (Light Mode) - Clean Translucent White
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+            background-repeat: no-repeat !important;
+            background-position: left center !important;
+            background-size: 20px 20px !important; // Ensure explicit knob size
+
+            &::before,
+            &::after {
+                content: none !important;
+                display: none !important;
+            }
+
+            &:checked {
+                // ON State (Dark Mode) - Brighter Translucent White
+                background-color: rgba(255, 255, 255, 0.4) !important;
+                border-color: rgba(255, 255, 255, 0.6) !important;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+                background-position: right center !important;
+            }
+
+            &:focus {
+                border-color: rgba(255, 255, 255, 0.8) !important;
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.15) !important;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+            }
+        }
+
+        .form-check-label {
+            color: #ffffff !important;
+        }
+    }
+
+    // Tabs - LIGHT MODE
+    .settings-tabs {
+        display: flex;
+        border-bottom: 1px solid #dee2e6;
+        background: #f8f9fa !important;
+        padding: 0;
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 12px;
+            border: none;
+            background: transparent !important;
+            color: #495057 !important;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: var(--albirru-primary) !important;
+                background: #e9ecef !important;
+            }
+
+            &.active {
+                color: var(--albirru-primary) !important;
+                border-bottom-color: var(--albirru-primary);
+                background: #ffffff !important;
+            }
+
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // Body
+    .settings-body {
+        padding: 16px;
+        max-height: 400px;
+        overflow-y: auto;
+        background: #ffffff !important;
+    }
+
+    // Footer
+    .settings-footer {
+        padding: 12px 16px;
+        background: #f8f9fa !important;
+        border-top: 1px solid #dee2e6;
+    }
+}
+
+// =============================================
+// Setting Group & Labels - LIGHT MODE
+// =============================================
+.setting-group {
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .setting-group-title {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #6c757d !important;
+        margin-bottom: 10px;
+    }
+}
+
+.setting-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    .setting-label {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: #212529 !important;
+
+        i {
+            color: #6c757d !important;
+        }
+    }
+}
+
+// =============================================
+// Color Scheme Buttons - LIGHT MODE
+// These buttons show theme color as background
+// =============================================
+.albirru-settings-dropdown .color-options {
+    display: flex !important;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.albirru-settings-dropdown .color-options .color-option {
+    width: 38px !important;
+    height: 38px !important;
+    border: 3px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    // Background color is set via inline style from template
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-color: rgba(0, 0, 0, 0.25) !important;
+    }
+
+    &.active {
+        border-color: #212529 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+    i {
+        font-size: 16px !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+}
+
+// Custom Color Pickers
+.custom-color-pickers {
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+
+    label {
+        font-size: 10px !important;
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        color: #6c757d !important;
+    }
+
+    .form-control-color {
+        padding: 2px !important;
+        height: 32px !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+    }
+}
+
+// =============================================
+// Theme Style Buttons - LIGHT MODE
+// =============================================
+.albirru-settings-dropdown .settings-body .style-options {
+    display: flex !important;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.albirru-settings-dropdown .settings-body .style-options .style-option {
+    flex: 1;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 8px !important;
+    border: 2px solid #ced4da !important;
+    border-radius: 8px !important;
+    background: #f8f9fa !important;
+    color: #495057 !important;
+    font-size: 11px !important;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-align: center;
+
+    &:hover {
+        border-color: var(--albirru-primary) !important;
+        color: var(--albirru-primary) !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    &.active {
+        border-color: var(--albirru-primary) !important;
+        background: var(--albirru-primary) !important;
+        color: #ffffff !important;
+        box-shadow: 0 3px 10px rgba(var(--albirru-primary-rgb), 0.35);
+    }
+
+    i {
+        font-size: 22px !important;
+        display: block !important;
+    }
+
+    span {
+        display: block !important;
+        white-space: nowrap;
+    }
+}
+
+// =============================================
+// Layout Options - LIGHT MODE
+// =============================================
+.layout-options {
+    display: flex;
+    gap: 8px;
+}
+
+.layout-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    border: 2px solid #ced4da !important;
+    border-radius: 8px;
+    background: #f8f9fa !important;
+    color: #495057 !important;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: var(--albirru-primary);
+        color: var(--albirru-primary);
+    }
+
+    &.active {
+        border-color: var(--albirru-primary);
+        background: rgba(var(--albirru-primary-rgb), 0.1) !important;
+        color: var(--albirru-primary) !important;
+
+        .layout-preview {
+            .preview-navbar {
+                background: var(--albirru-primary);
+            }
+
+            .preview-sidebar {
+                background: var(--albirru-primary);
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+// Layout Preview
+.layout-preview {
+    width: 60px;
+    height: 45px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+
+    .preview-navbar {
+        height: 8px;
+        background: #6c757d;
+    }
+
+    .preview-sidebar {
+        position: absolute;
+        width: 15px;
+        height: calc(100% - 8px);
+        top: 8px;
+        left: 0;
+        background: #6c757d;
+        opacity: 0.5;
+    }
+
+    .preview-content {
+        flex: 1;
+        background: #f8f9fa;
+    }
+
+    &[data-layout="left"] {
+        position: relative;
+
+        .preview-content {
+            margin-left: 15px;
+        }
+    }
+
+    &[data-layout="top"] {
+        .preview-content {
+            margin-left: 0;
+        }
+    }
+}
+
+// =============================================
+// Font Options - LIGHT MODE
+// =============================================
+.font-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.font-option {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ced4da !important;
+    border-radius: 8px;
+    background: #f8f9fa !important;
+    color: #212529 !important;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: var(--albirru-primary) !important;
+    }
+
+    &.active {
+        border-color: var(--albirru-primary) !important;
+        background: var(--albirru-primary) !important;
+        color: #ffffff !important;
+    }
+}
+
+// =============================================
+// Chatter Position Buttons - LIGHT MODE
+// =============================================
+.albirru-settings-dropdown .setting-group .btn-group {
+    .btn-chatter {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        font-weight: 500;
+        border: 2px solid #ced4da !important;
+        background: #f8f9fa !important;
+        color: #495057 !important;
+        transition: all 0.15s ease;
+
+        &:first-child {
+            border-radius: 8px 0 0 8px !important;
+        }
+
+        &:last-child {
+            border-radius: 0 8px 8px 0 !important;
+        }
+
+        &:hover {
+            border-color: var(--albirru-primary) !important;
+            color: var(--albirru-primary) !important;
+            background: #ffffff !important;
+        }
+
+        &.active {
+            border-color: var(--albirru-primary) !important;
+            background: var(--albirru-primary) !important;
+            color: #ffffff !important;
+        }
+
+        i {
+            color: inherit !important;
+        }
+    }
+}
+
+// =============================================
+// Button Group in Settings - LIGHT MODE
+// =============================================
+.setting-group {
+    .btn-group {
+        .btn {
+            padding: 8px;
+            font-size: 13px;
+
+            &.active {
+                background: var(--albirru-primary);
+                border-color: var(--albirru-primary);
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+// Form switch styling
+.form-switch {
+    .form-check-input {
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        // Light Mode default (unchecked) - Standard Grey
+        background-color: #e9ecef !important;
+        border-color: #dee2e6 !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+        background-repeat: no-repeat !important;
+        background-position: left center !important;
+        background-size: 20px 20px !important;
+
+        &::before,
+        &::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        &:checked {
+            background-color: var(--albirru-primary) !important;
+            border-color: var(--albirru-primary) !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+            background-position: right center !important;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(var(--albirru-primary-rgb), 0.2);
+            border-color: var(--albirru-primary) !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+        }
+    }
+}
+
+// =============================================
+// DARK MODE Adjustments
+// =============================================
+html.albirru-dark-mode,
+html[data-albirru-dark="true"] {
+
+    .o_main_navbar .albirru-settings-dropdown,
+    .albirru-settings-dropdown {
+
+        // Override light mode text colors with dark mode colors
+        &,
+        & *,
+        & span,
+        & button:not(.active),
+        & a,
+        & .tab-btn:not(.active),
+        & .style-option:not(.active),
+        & .font-option:not(.active),
+        & .layout-option:not(.active),
+        & .setting-group-title,
+        & .setting-label {
+            color: #e0e0e0 !important;
+        }
+
+        background: #1e1e2d !important;
+        border-color: #2d2d44 !important;
+
+        // Tabs - DARK MODE
+        .settings-tabs {
+            background: #15151f !important;
+            border-color: #2d2d44 !important;
+
+            .tab-btn {
+                color: #a0a0a0 !important;
+                background: transparent !important;
+
+                &:hover {
+                    background: #252535 !important;
+                    color: #e0e0e0 !important;
+                }
+
+                &.active {
+                    color: #ffffff !important;
+                    background: #1e1e2d !important;
+                }
+            }
+        }
+
+        // Body - DARK MODE
+        .settings-body {
+            background: #1e1e2d !important;
+        }
+
+        // Footer - DARK MODE
+        .settings-footer {
+            background: #15151f !important;
+            border-color: #2d2d44 !important;
+        }
+
+        // Labels - DARK MODE
+        .setting-group-title {
+            color: #a0a0a0 !important;
+        }
+
+        .setting-item-row .setting-label {
+            color: #e0e0e0 !important;
+        }
+
+        // Color Scheme - DARK MODE (same as light, colors come from inline style)
+        .color-options .color-option {
+            border-color: rgba(255, 255, 255, 0.15) !important;
+
+            &:hover {
+                border-color: rgba(255, 255, 255, 0.3) !important;
+            }
+
+            &.active {
+                border-color: #ffffff !important;
+            }
+        }
+
+        // Custom Color Pickers - DARK MODE
+        .custom-color-pickers {
+            background: #252535 !important;
+            border-color: #3d3d55 !important;
+
+            label {
+                color: #a0a0a0 !important;
+            }
+
+            .form-control-color {
+                background: #1e1e2d !important;
+                border-color: #3d3d55 !important;
+            }
+        }
+
+        // Theme Style - DARK MODE
+        .style-options .style-option {
+            border-color: #3d3d55 !important;
+            background: #252535 !important;
+            color: #c0c0c0 !important;
+
+            &:hover {
+                border-color: var(--albirru-primary) !important;
+                background: #2d2d44 !important;
+                color: #ffffff !important;
+            }
+
+            &.active {
+                border-color: var(--albirru-primary) !important;
+                background: var(--albirru-primary) !important;
+                color: #ffffff !important;
+            }
+        }
+
+        // Layout Options - DARK MODE
+        .layout-option {
+            border-color: #3d3d55 !important;
+            background: #252535 !important;
+            color: #c0c0c0 !important;
+
+            &:hover {
+                border-color: var(--albirru-primary) !important;
+            }
+
+            &.active {
+                background: rgba(var(--albirru-primary-rgb), 0.2) !important;
+            }
+        }
+
+        .layout-preview {
+            border-color: #3d3d55 !important;
+            background: #1a1a2e !important;
+
+            .preview-content {
+                background: #252535 !important;
+            }
+        }
+
+        // Font Options - DARK MODE
+        .font-option {
+            border-color: #3d3d55 !important;
+            background: #252535 !important;
+            color: #e0e0e0 !important;
+
+            &:hover {
+                border-color: var(--albirru-primary) !important;
+            }
+
+            &.active {
+                background: var(--albirru-primary) !important;
+                color: #ffffff !important;
+            }
+        }
+
+        // Button Group - DARK MODE
+        .btn-outline-secondary {
+            color: #e0e0e0 !important;
+            border-color: #3d3d55 !important;
+
+            &:hover {
+                background: #252535 !important;
+            }
+        }
+
+        // Toggles in Body - DARK MODE
+        // Ensure visibility against dark background
+        .form-switch .form-check-input {
+            // Unchecked: Brighter Grey (Better Contrast)
+            background-color: #505060 !important;
+            border-color: #656575 !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important; // White knob
+            background-repeat: no-repeat !important;
+            background-position: left center !important;
+            background-size: 20px 20px !important;
+
+            &::before,
+            &::after {
+                content: none !important;
+                display: none !important;
+            }
+
+            &:checked {
+                background-color: var(--albirru-primary) !important;
+                border-color: var(--albirru-primary) !important;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+                background-position: right center !important;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+            }
+        }
+    }
+}

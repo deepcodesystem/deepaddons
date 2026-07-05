@@ -1,0 +1,331 @@
+// Albirru Backend Theme - Search Panel Styles
+// Compatible with Odoo 19
+
+// =============================================
+// Explicit Light Mode (when dark mode is NOT active)
+// =============================================
+html:not(.albirru-dark-mode):not([data-albirru-dark="true"]) {
+    .o_search_panel {
+        background-color: #ffffff !important;
+        border-right-color: #dee2e6 !important;
+
+        .o_search_panel_section_header {
+            color: var(--albirru-primary) !important;
+            border-bottom-color: #dee2e6 !important;
+        }
+
+        .o_search_panel_category_value,
+        .o_search_panel_category_value .o_search_panel_label,
+        .o_search_panel_category_value .o_search_panel_label_title {
+            color: #212529 !important;
+        }
+
+        .o_search_panel_filter_value label,
+        .o_search_panel_filter_value .o_search_panel_label_title {
+            color: #212529 !important;
+        }
+
+        .o_search_panel_filter_value .o_search_panel_counter {
+            color: #6c757d !important;
+        }
+
+        // Active category keeps white text
+        .o_search_panel_category_value.active>.o_search_panel_label,
+        .o_search_panel_category_value>.o_search_panel_label.active {
+            background-color: var(--albirru-primary) !important;
+            color: #ffffff !important;
+
+            .o_search_panel_label_title {
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+// =============================================
+// Base Styles
+// =============================================
+.o_controller_with_searchpanel {
+    display: flex;
+    align-items: stretch;
+
+    .o_search_panel {
+        background-color: var(--albirru-light-bg-secondary) !important;
+        border-right: 1px solid var(--albirru-light-border) !important;
+        padding: 15px !important;
+        width: 260px !important;
+        flex: 0 0 260px !important;
+
+        .o_search_panel_section_header {
+            background-color: transparent !important;
+            color: var(--albirru-primary) !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid var(--albirru-light-border) !important;
+            margin-bottom: 10px !important;
+
+            i {
+                margin-right: 8px !important;
+                color: var(--albirru-primary) !important;
+            }
+        }
+
+        // Category section
+        .o_search_panel_category {
+            .o_search_panel_section_icon {
+                color: var(--albirru-primary) !important;
+            }
+
+            // Category items (All, Official Apps, Industries)
+            .o_search_panel_category_value {
+                color: var(--albirru-light-text) !important;
+
+                .o_search_panel_label {
+                    color: var(--albirru-light-text) !important;
+                    padding: 6px 10px !important;
+                    border-radius: var(--albirru-radius-sm) !important;
+                    transition: all var(--albirru-transition-fast) !important;
+
+                    &:hover {
+                        background-color: var(--albirru-light-hover) !important;
+                    }
+
+                    .o_search_panel_label_title {
+                        color: inherit !important;
+                    }
+                }
+
+                // Selected/active category
+                &.active>.o_search_panel_label,
+                >.o_search_panel_label.active {
+                    background-color: var(--albirru-primary) !important;
+                    color: #ffffff !important;
+
+                    .o_search_panel_label_title {
+                        color: #ffffff !important;
+                        font-weight: 600 !important;
+                    }
+                }
+            }
+        }
+
+        // Filter section (CATEGORIES filter with checkboxes)
+        .o_search_panel_filter {
+            .o_search_panel_filter_group {
+                .o_search_panel_group_header {
+                    color: var(--albirru-light-text) !important;
+                }
+
+                // Filter values (All, Sales, Website, etc.)
+                .o_search_panel_filter_value {
+                    padding: 4px 0 !important;
+
+                    label {
+                        color: var(--albirru-light-text) !important;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        padding: 4px 8px !important;
+                        border-radius: var(--albirru-radius-sm) !important;
+                        transition: background-color 0.15s !important;
+
+                        &:hover {
+                            background-color: var(--albirru-light-hover) !important;
+                        }
+
+                        // Checkbox styling
+                        input[type="checkbox"] {
+                            margin-right: 8px !important;
+                            accent-color: var(--albirru-primary) !important;
+                        }
+
+                        // Label text
+                        .o_search_panel_label_title {
+                            color: inherit !important;
+                        }
+
+                        // Counter badge
+                        .o_search_panel_counter {
+                            color: var(--albirru-light-text-muted) !important;
+                            margin-left: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Legacy list-group styles
+        .o_search_panel_field {
+            .list-group-item {
+                background-color: transparent !important;
+                border: none !important;
+                padding: 2px 0 !important;
+                margin-bottom: 2px !important;
+
+                .list-group-item-action {
+                    border-radius: var(--albirru-radius-md) !important;
+                    padding: 8px 12px !important;
+                    transition: all var(--albirru-transition-fast) !important;
+                    color: var(--albirru-light-text) !important;
+                    border: none !important;
+
+                    &:hover:not(.active) {
+                        background-color: var(--albirru-light-hover) !important;
+                    }
+
+                    &.active {
+                        background-color: var(--albirru-primary) !important;
+                        color: #ffffff !important;
+                        box-shadow: var(--albirru-shadow-sm) !important;
+
+                        .o_search_panel_label_title {
+                            font-weight: 600 !important;
+                            color: #ffffff !important;
+                        }
+
+                        .text-muted {
+                            color: rgba(255, 255, 255, 0.8) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =============================================
+// Dark Mode Support for Search Panel
+// =============================================
+html.albirru-dark-mode,
+html[data-albirru-dark="true"] {
+
+    // Search Panel Dark Mode - Applied globally regardless of container
+    .o_search_panel {
+        background-color: var(--albirru-dark-bg-secondary) !important;
+        border-right-color: var(--albirru-dark-border) !important;
+
+        // Section headers
+        .o_search_panel_section_header {
+            color: var(--albirru-primary) !important;
+            border-bottom-color: var(--albirru-dark-border) !important;
+
+            i {
+                color: var(--albirru-primary) !important;
+            }
+        }
+
+        // Category section - dark mode
+        .o_search_panel_category {
+            .o_search_panel_category_value {
+                color: var(--albirru-dark-text) !important;
+
+                .o_search_panel_label {
+                    color: var(--albirru-dark-text) !important;
+
+                    &:hover {
+                        background-color: var(--albirru-dark-hover) !important;
+                    }
+
+                    .o_search_panel_label_title {
+                        color: var(--albirru-dark-text) !important;
+                    }
+                }
+
+                // Selected/active category - dark mode
+                &.active>.o_search_panel_label,
+                >.o_search_panel_label.active {
+                    background-color: var(--albirru-primary) !important;
+                    color: #ffffff !important;
+
+                    .o_search_panel_label_title {
+                        color: #ffffff !important;
+                    }
+                }
+            }
+        }
+
+        // Filter section - dark mode
+        .o_search_panel_filter {
+            .o_search_panel_filter_group {
+                .o_search_panel_group_header {
+                    color: var(--albirru-dark-text) !important;
+                }
+
+                .o_search_panel_filter_value {
+                    label {
+                        color: var(--albirru-dark-text) !important;
+
+                        &:hover {
+                            background-color: var(--albirru-dark-hover) !important;
+                        }
+
+                        .o_search_panel_label_title {
+                            color: var(--albirru-dark-text) !important;
+                        }
+
+                        .o_search_panel_counter {
+                            color: var(--albirru-dark-text-muted) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Legacy list-group - dark mode
+        .o_search_panel_field {
+            .list-group-item {
+                background-color: transparent !important;
+                border: none !important;
+
+                .list-group-item-action {
+                    color: var(--albirru-dark-text) !important;
+
+                    &:hover:not(.active) {
+                        background-color: var(--albirru-dark-hover) !important;
+                    }
+
+                    &.active {
+                        background-color: var(--albirru-primary) !important;
+                        color: #ffffff !important;
+
+                        .o_search_panel_label_title {
+                            color: #ffffff !important;
+                        }
+
+                        .text-muted {
+                            color: rgba(255, 255, 255, 0.8) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =============================================
+// Mobile support
+// =============================================
+@media (max-width: 767.98px) {
+    .o_controller_with_searchpanel {
+        flex-direction: column;
+
+        .o_search_panel {
+            width: 100% !important;
+            flex: 0 0 auto !important;
+            border-right: none !important;
+            border-bottom: 1px solid var(--albirru-light-border) !important;
+            padding: 10px !important;
+        }
+    }
+
+    html.albirru-dark-mode,
+    html[data-albirru-dark="true"] {
+        .o_controller_with_searchpanel {
+            .o_search_panel {
+                border-bottom-color: var(--albirru-dark-border) !important;
+            }
+        }
+    }
+}

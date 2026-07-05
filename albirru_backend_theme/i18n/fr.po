@@ -1,0 +1,1169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* albirru_backend_theme
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-04 00:57+0000\n"
+"PO-Revision-Date: 2026-07-04 00:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid ""
+"<b>Glass:</b> Modern, centered card with blur effect.<br/>\n"
+"                                    <b>Split:</b> Image on left, form on right.<br/>\n"
+"                                    <b>Minimal:</b> Minimalist transparent form."
+msgstr ""
+"<b>Verre :</b> Carte moderne centrée avec effet de flou.<br/>\n"
+"                                    <b>Split:</b> Image à gauche, formulaire à droite.<br/>\n"
+"                                    <b>Minimal:</b> Forme transparente minimaliste."
+
+#. module: albirru_backend_theme
+#. odoo-python
+#: code:addons/albirru_backend_theme/models/theme_config.py:0
+msgid ""
+"A theme configuration already exists for this company. Only one "
+"configuration per company is allowed."
+msgstr ""
+"Une configuration de thème existe déjà pour cette entreprise. Une seule "
+"configuration par entreprise est autorisée."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Accent"
+msgstr "Accent"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__accent_color
+msgid "Accent Color"
+msgstr "Couleur d'accentuation"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__active
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+msgid "Add"
+msgstr "Ajouter"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+msgid "Add current page"
+msgstr "Ajouter la page actuelle"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_res_company
+msgid "Add fields for moroccan company"
+msgstr "Sociétés"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/sidebar.xml:0
+msgid "Albirru"
+msgstr "Albirru"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_albirru_app_group
+msgid "Albirru App Group"
+msgstr "Groupe d'applications Albirru"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Albirru Theme Branding"
+msgstr "Image de marque du thème Albirru"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_albirru_theme_config
+msgid "Albirru Theme Configuration"
+msgstr "Configuration du thème Albirru"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "All Models"
+msgstr "Tous les modèles"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "All Settings"
+msgstr "Tous les paramètres"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_10
+msgid "Amber Gold"
+msgstr "Ambre Or"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+msgid "App Drawer"
+msgstr "Tiroir d'applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_ir_ui_menu__albirru_app_group_id
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_form
+msgid "App Group"
+msgstr "Groupe d'applications"
+
+#. module: albirru_backend_theme
+#: model:ir.actions.act_window,name:albirru_backend_theme.action_albirru_app_group
+#: model:ir.ui.menu,name:albirru_backend_theme.menu_albirru_app_groups
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_list
+msgid "App Groups"
+msgstr "Groupes d'applications"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.actions.act_window,help:albirru_backend_theme.action_albirru_app_group
+msgid ""
+"App Groups help organize applications in the App Drawer.\n"
+"                    Create groups like \"Sales\", \"Inventory\", \"Accounting\" to\n"
+"                    categorize your applications."
+msgstr ""
+"Les groupes d'applications aident à organiser les applications dans le tiroir d'applications.\n"
+"                    Créez des groupes comme « Ventes », « Inventaire », « Comptabilité » pour\n"
+"                    catégorisez vos candidatures."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Appearance"
+msgstr "Apparence"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__group_menu_list_ids
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_form
+msgid "Applications"
+msgstr "Applications"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Apply & Refresh"
+msgstr "Appliquer et actualiser"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+#: code:addons/albirru_backend_theme/static/src/xml/navbar.xml:0
+msgid "Apps"
+msgstr "Applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_backend_logo
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_backend_logo
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Backend Logo"
+msgstr "Logo back-end"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_backend_logo_icon
+msgid "Backend Logo Icon"
+msgstr "Icône du logo back-end"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_backend_logo_icon
+msgid "Backend Logo Icon (Small)"
+msgstr "Icône du logo backend (petite)"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Backend Settings"
+msgstr "Paramètres du back-end"
+
+#. module: albirru_backend_theme
+#: model:ir.ui.menu,name:albirru_backend_theme.albirru_theme_config_root
+msgid "Backend Theme"
+msgstr "Thème back-end"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__menu_bg_opacity
+msgid "Background Opacity (%)"
+msgstr "Opacité de l'arrière-plan (%)"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Background image for login page"
+msgstr "Image d'arrière-plan de la page de connexion"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_albirru_theme_config__menu_background
+msgid "Background image for sidebar and app drawer"
+msgstr ""
+"Image d'arrière-plan pour la barre latérale et le tiroir d'applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_13
+msgid "Black Elegance"
+msgstr "Élégance noire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_18
+msgid "Blue Grey"
+msgstr "Bleu Gris"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_8
+msgid "Blue Ocean"
+msgstr "Océan bleu"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_users__albirru_bookmark_ids
+msgid "Bookmarks"
+msgstr "Signets"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__input_style__bordered
+msgid "Bordered"
+msgstr "Bordé"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__chatter_position__bottom
+msgid "Bottom"
+msgstr "Bas"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_12
+msgid "Brown Earth"
+msgstr "Terre brune"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_tab_name
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_tab_name
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Browser Tab Name"
+msgstr "Nom de l'onglet du navigateur"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Browser tab icon"
+msgstr "Icône de l'onglet du navigateur"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__button_style
+msgid "Button Style"
+msgstr "Style de bouton"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Buttons"
+msgstr "Boutons"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__res_company__albirru_login_style__glass
+msgid "Centered Glass (Default)"
+msgstr "Verre centré (par défaut)"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__chatter_position
+msgid "Chatter Position"
+msgstr "Position de bavardage"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Choose the visual layout of the login page"
+msgstr "Choisissez la présentation visuelle de la page de connexion"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/sidebar.xml:0
+msgid "Close Menu"
+msgstr "Fermer le menu"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__color_scheme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Color Scheme"
+msgstr "Schéma de couleurs"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__list_row_height__comfortable
+msgid "Comfortable"
+msgstr "Confortable"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__list_row_height__compact
+msgid "Compact"
+msgstr "Compact"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__name
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Configuration Name"
+msgstr "Nom de la configuration"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.actions.act_window,help:albirru_backend_theme.action_albirru_app_group
+msgid "Create your first App Group"
+msgstr "Créez votre premier groupe d'applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__create_uid
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__create_uid
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__create_date
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__create_date
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Ctrl+K"
+msgstr "Ctrl+K"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Custom Colors"
+msgstr "Couleurs personnalisées"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_ir_ui_menu__icon_img
+msgid "Custom Icon Image"
+msgstr "Image d'icône personnalisée"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_ir_ui_menu__icon_img
+msgid "Custom icon image for this menu"
+msgstr "Image d'icône personnalisée pour ce menu"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Customize theme appearance, layout, and UI elements"
+msgstr ""
+"Personnalisez l'apparence, la mise en page et les éléments de l'interface "
+"utilisateur du thème"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_11
+msgid "Cyan Sky"
+msgstr "Ciel cyan"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__dark_mode
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_users__albirru_dark_mode
+msgid "Dark Mode"
+msgstr "Mode sombre"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_15
+msgid "Deep Purple"
+msgstr "Violet profond"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__display_name
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__display_name
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__loader_style__dots
+msgid "Dots"
+msgstr "Points"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "ESC"
+msgstr "ÉCHAP"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_res_users__albirru_dark_mode
+msgid "Enable dark mode for this user"
+msgstr "Activer le mode sombre pour cet utilisateur"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_ir_ui_menu__use_icon
+msgid "Enable to use a custom icon class instead of default icon"
+msgstr ""
+"Activer l'utilisation d'une classe d'icônes personnalisée au lieu de l'icône"
+" par défaut"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Enter"
+msgstr "Entrer"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Fallback color if no image is set"
+msgstr "Couleur de repli si aucune image n'est définie"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/navbar.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_favicon
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_favicon
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Favicon"
+msgstr "Icône de favori"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__button_style__filled
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__input_style__filled
+msgid "Filled"
+msgstr "Rempli"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Font"
+msgstr "Fonte"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__font_family
+msgid "Font Family"
+msgstr "Famille de polices"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__font_size
+msgid "Font Size"
+msgstr "Taille de la police"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_albirru_app_group__group_icon_class_name
+msgid "FontAwesome or other icon class (e.g., fa-folder, fa-users)"
+msgstr ""
+"FontAwesome ou autre classe d'icônes (par exemple, dossier fa, utilisateurs "
+"fa)"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_ir_ui_menu__icon_class_name
+msgid "FontAwesome or other icon class (e.g., fa-home, fa-cog)"
+msgstr "FontAwesome ou autre classe d'icônes (par exemple, fa-home, fa-cog)"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Form View"
+msgstr "Vue Formulaire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_2
+msgid "Green Nature"
+msgstr "Nature verte"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_17
+msgid "Grey Steel"
+msgstr "Acier gris"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__group_menu_icon
+msgid "Group Icon"
+msgstr "Icône de groupe"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__name
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_form
+msgid "Group Name"
+msgstr "Nom du groupe"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_ir_ui_menu__albirru_app_group_id
+msgid "Group this application belongs to in the App Drawer"
+msgstr ""
+"Groupe auquel cette application appartient dans le tiroir d'applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_ir_http
+msgid "HTTP Routing"
+msgstr "Routage HTTP"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__id
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__id
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__id
+msgid "ID"
+msgstr "IDENTIFIANT"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__group_icon_class_name
+msgid "Icon Class"
+msgstr "Classe d'icônes"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_ir_ui_menu__icon_class_name
+msgid "Icon Class Name"
+msgstr "Nom de la classe d'icône"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__res_company__albirru_login_style__minimal
+msgid "Immersive Minimalist"
+msgstr "Minimaliste immersif"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_9
+msgid "Indigo Deep"
+msgstr "Indigo profond"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__input_style
+msgid "Input Style"
+msgstr "Style de saisie"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Inputs"
+msgstr "Entrées"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__inter
+msgid "Inter"
+msgstr "Entre"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_res_users__albirru_sidebar_pinned
+msgid "Keep sidebar pinned/expanded for this user"
+msgstr "Garder la barre latérale épinglée/développée pour cet utilisateur"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_size__large
+msgid "Large"
+msgstr "Grand"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__write_uid
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__write_uid
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__write_date
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__write_date
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__lato
+msgid "Lato"
+msgstr "Lato"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Layout"
+msgstr "Mise en page"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__sidebar_position__left
+msgid "Left Sidebar"
+msgstr "Barre latérale gauche"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_16
+msgid "Light Blue"
+msgstr "Bleu clair"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_14
+msgid "Lime Fresh"
+msgstr "Citron vert frais"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__list_row_height
+msgid "List Row Height"
+msgstr "Hauteur de ligne de liste"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "List View"
+msgstr "Vue en liste"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__loader_style
+msgid "Loader Style"
+msgstr "Style de chargeur"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Loading"
+msgstr "Chargement"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_login_background
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Login Background"
+msgstr "Contexte de connexion"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_login_background_color
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_login_background_color
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Login Background Color"
+msgstr "Couleur d'arrière-plan de connexion"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_login_background
+msgid "Login Background Image"
+msgstr "Image d'arrière-plan de connexion"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_company__albirru_login_style
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_config_settings__albirru_login_style
+msgid "Login Layout Style"
+msgstr "Style de présentation de connexion"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Login Page Customization"
+msgstr "Personnalisation de la page de connexion"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Login Style"
+msgstr "Style de connexion"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/sidebar.xml:0
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.login_layout_albirru
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.login_layout_logo_albirru
+msgid "Logo"
+msgstr "Logo"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Logo displayed in the backend navbar"
+msgstr "Logo affiché dans la barre de navigation backend"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_size__medium
+msgid "Medium"
+msgstr "Moyen"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+#: model:ir.model,name:albirru_backend_theme.model_ir_ui_menu
+msgid "Menu"
+msgstr "Menu"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Menu Background"
+msgstr "Fond de menu"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__menu_background
+msgid "Menu Background Image"
+msgstr "Image d'arrière-plan du menu"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__sidebar_position
+msgid "Menu Position"
+msgstr "Emplacement des menus"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Menus"
+msgstr "Menus"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+msgid "No apps found for \""
+msgstr "Aucune application trouvée pour \""
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+msgid "No bookmarks yet"
+msgstr "Pas encore de favoris"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+msgid "No results for \""
+msgstr "Aucun résultat pour \""
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "No results found for \""
+msgstr "Aucun résultat trouvé pour \""
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__nunito
+msgid "Nunito Sans"
+msgstr "Nunito Sans"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_1
+msgid "Odoo Purple"
+msgstr "Odoo Violet"
+
+#. module: albirru_backend_theme
+#: model:ir.model.constraint,message:albirru_backend_theme.constraint_albirru_theme_config_unique_company_id
+msgid "Only one theme configuration per company is allowed!"
+msgstr "Une seule configuration de thème par entreprise est autorisée !"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Opacity"
+msgstr "Opacité"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,help:albirru_backend_theme.field_albirru_theme_config__menu_bg_opacity
+msgid ""
+"Opacity of the background image (0-100). Lower value = more transparent."
+msgstr ""
+"Opacité de l'image de fond (0-100). Valeur inférieure = plus transparent."
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__open_sans
+msgid "Open Sans"
+msgstr "Ouvrir Sans"
+
+#. module: albirru_backend_theme
+#: model:ir.actions.server,name:albirru_backend_theme.albirru_theme_config_server_action
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Open Theme Settings"
+msgstr "Ouvrir les paramètres du thème"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_4
+msgid "Orange Warm"
+msgstr "Orange Chaud"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+#: code:addons/albirru_backend_theme/static/src/xml/sidebar.xml:0
+msgid "Other Apps"
+msgstr "Autres applications"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__button_style__outlined
+msgid "Outlined"
+msgstr "Décrit"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Pin Sidebar"
+msgstr "Épingler la barre latérale"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_7
+msgid "Pink Rose"
+msgstr "Rose Rose"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__poppins
+msgid "Poppins"
+msgstr "Poppins"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/sidebar.xml:0
+msgid "Powred by DeepCode"
+msgstr "Propulsé par DeepCode"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Primary"
+msgstr "Primaire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__primary_color
+msgid "Primary Color"
+msgstr "Couleur primaire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__loader_style__bar
+msgid "Progress Bar"
+msgstr "Barre de progression"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_3
+msgid "Purple Elegant"
+msgstr "Violet élégant"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Records"
+msgstr "Enregistrements"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_5
+msgid "Red Bold"
+msgstr "Rouge gras"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+msgid "Remove"
+msgstr "Retirer"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Remove Background"
+msgstr "Supprimer l'arrière-plan"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__chatter_position__right
+msgid "Right Side"
+msgstr "Côté droit"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_family__roboto
+msgid "Roboto"
+msgstr "Robot"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__theme_style__rounded
+msgid "Rounded"
+msgstr "Arrondi"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Row Height"
+msgstr "Hauteur de rangée"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Save changes and reload the page to apply theme settings immediately."
+msgstr ""
+"Enregistrez les modifications et rechargez la page pour appliquer "
+"immédiatement les paramètres du thème."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/systray.xml:0
+msgid "Search (Ctrl+K)"
+msgstr "Rechercher (Ctrl+K)"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+msgid "Search apps and menus..."
+msgstr "Rechercher des applications et des menus..."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Search menus, records..."
+msgstr "Rechercher des menus, des enregistrements..."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Searching..."
+msgstr "Recherche..."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Secondary"
+msgstr "Secondaire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__secondary_color
+msgid "Secondary Color"
+msgstr "Couleur secondaire"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__sequence
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: albirru_backend_theme
+#: model:ir.actions.act_window,name:albirru_backend_theme.action_backend_theme_config_settings
+#: model:ir.ui.menu,name:albirru_backend_theme.albirru_theme_config_general_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__sidebar_pinned
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_res_users__albirru_sidebar_pinned
+msgid "Sidebar Pinned"
+msgstr "Barre latérale épinglée"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__font_size__small
+msgid "Small"
+msgstr "Petit"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__button_style__soft
+msgid "Soft"
+msgstr "Doux"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__loader_style__spinner
+msgid "Spinner"
+msgstr "Fileur"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__res_company__albirru_login_style__split
+msgid "Split Screen Professional"
+msgstr "Professionnel de l'écran partagé"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__theme_style__square
+msgid "Square"
+msgstr "Carré"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__theme_style__standard
+msgid "Standard"
+msgstr "Standard"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "Start typing to search..."
+msgstr "Commencez à taper pour rechercher..."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "Sticky Header"
+msgstr "En-tête collant"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__list_sticky_header
+msgid "Sticky List Header"
+msgstr "En-tête de liste collante"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__color_scheme__scheme_6
+msgid "Teal Fresh"
+msgstr "Sarcelle fraîche"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Text shown in browser tab"
+msgstr "Texte affiché dans l'onglet du navigateur"
+
+#. module: albirru_backend_theme
+#: model:ir.actions.act_window,name:albirru_backend_theme.albirru_theme_config_action
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_tree
+msgid "Theme Configurations"
+msgstr "Configurations de thème"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "Theme Customization"
+msgstr "Personnalisation du thème"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.ui.menu,name:albirru_backend_theme.albirru_theme_config_menu
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Theme Settings"
+msgstr "Paramètres du thème"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__theme_style
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Theme Style"
+msgstr "Style de thème"
+
+#. module: albirru_backend_theme
+#. odoo-python
+#: code:addons/albirru_backend_theme/models/theme_config.py:0
+msgid ""
+"Theme configuration cannot be deleted. It is required for the theme to work "
+"properly."
+msgstr ""
+"La configuration du thème ne peut pas être supprimée. Il est nécessaire au "
+"bon fonctionnement du thème."
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__sidebar_position__top
+msgid "Top Horizontal"
+msgstr "Haut horizontal"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "Typography"
+msgstr "Typographie"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+msgid "UI"
+msgstr "Interface utilisateur"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.albirru_theme_config_view_form
+msgid "UI Elements"
+msgstr "Éléments de l'interface utilisateur"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__url
+msgid "URL"
+msgstr "URL"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields.selection,name:albirru_backend_theme.selection__albirru_theme_config__input_style__underlined
+msgid "Underlined"
+msgstr "Souligné"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/quick_settings.xml:0
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_theme_config__use_custom_colors
+msgid "Use Custom Colors"
+msgstr "Utiliser des couleurs personnalisées"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_ir_ui_menu__use_icon
+msgid "Use Custom Icon Class"
+msgstr "Utiliser la classe d'icônes personnalisée"
+
+#. module: albirru_backend_theme
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_app_group__use_group_icon
+msgid "Use Icon Class"
+msgstr "Utiliser la classe d'icônes"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_res_users
+#: model:ir.model.fields,field_description:albirru_backend_theme.field_albirru_bookmark__user_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: albirru_backend_theme
+#: model:ir.model,name:albirru_backend_theme.model_albirru_bookmark
+msgid "User Bookmarks"
+msgstr "Signets utilisateur"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.login_layout_albirru
+msgid "Welcome to your workspace. Please sign in to continue."
+msgstr ""
+"Bienvenue dans votre espace de travail. Veuillez vous connecter pour "
+"continuer."
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/app_drawer.xml:0
+msgid "apps available"
+msgstr "applications disponibles"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.res_config_settings_view_form_albirru
+msgid "e.g. My Company"
+msgstr "par ex. Mon entreprise"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_list
+msgid "e.g., fa-folder"
+msgstr "par exemple, dossier fa"
+
+#. module: albirru_backend_theme
+#: model_terms:ir.ui.view,arch_db:albirru_backend_theme.view_albirru_app_group_form
+msgid "fa-folder"
+msgstr "dossier fa"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "results"
+msgstr "résultats"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "to close"
+msgstr "fermer"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "to navigate"
+msgstr "naviguer"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "to open search"
+msgstr "ouvrir la recherche"
+
+#. module: albirru_backend_theme
+#. odoo-javascript
+#: code:addons/albirru_backend_theme/static/src/xml/search_modal.xml:0
+msgid "to select"
+msgstr "sélectionner"
