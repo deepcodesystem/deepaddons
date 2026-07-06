@@ -1,0 +1,430 @@
+// Albirru Backend Theme - Control Panel & Search View Styles
+// Compatible with Odoo 19
+
+// =============================================
+// Explicit Light Mode (when dark mode is NOT active)
+// =============================================
+html:not(.albirru-dark-mode):not([data-albirru-dark="true"]) {
+    .o_searchview {
+        background-color: #ffffff !important;
+        border-color: #dee2e6 !important;
+
+        .o_searchview_input_container {
+            background-color: transparent !important;
+
+            input,
+            .o_searchview_input {
+                background-color: transparent !important;
+                color: #212529 !important;
+
+                &::placeholder {
+                    color: #6c757d !important;
+                }
+            }
+        }
+
+        .o_searchview_dropdown_toggler {
+            background-color: #f8f9fa !important;
+            border-color: #dee2e6 !important;
+            color: var(--albirru-primary) !important;
+        }
+
+        .o_searchview_facet {
+            background-color: rgba(var(--albirru-primary-rgb), 0.1) !important;
+            border-color: rgba(var(--albirru-primary-rgb), 0.2) !important;
+            color: #212529 !important;
+
+            .o_facet_values,
+            .o_facet_value {
+                color: #212529 !important;
+            }
+
+            .o_facet_remove {
+                color: #6c757d !important;
+
+                &:hover {
+                    color: #dc3545 !important;
+                }
+            }
+        }
+    }
+
+    .o_control_panel {
+        background-color: #ffffff !important;
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .o_control_panel_actions {
+
+        button,
+        .btn {
+            color: #212529 !important;
+
+            &:hover {
+                background-color: #e9ecef !important;
+            }
+        }
+
+        .btn-primary {
+            color: #ffffff !important;
+            background-color: var(--albirru-primary) !important;
+        }
+    }
+
+    // Search Bar Menu Popover (Filters, Group By, Favorites)
+    .o_popover,
+    .o_search_bar_menu {
+        background-color: #ffffff !important;
+        border-color: #dee2e6 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+
+        // Inner dropdown containers - these need explicit light mode styling
+        .o_dropdown_container,
+        .o_filter_menu,
+        .o_group_by_menu,
+        .o_favorite_menu,
+        >div {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+        }
+
+        // Section headers (Filters, Group By, Favorites)
+        .o_dropdown_title,
+        .fw-bolder {
+            color: #212529 !important;
+        }
+
+        // Menu items
+        .o_menu_item,
+        .o-dropdown--menu-item,
+        .dropdown-item,
+        .o-dropdown-item {
+            color: #212529 !important;
+            background-color: transparent !important;
+
+            &:hover,
+            &:focus {
+                background-color: #e9ecef !important;
+            }
+
+            // Icons
+            i,
+            .fa,
+            .oi {
+                color: var(--albirru-primary) !important;
+            }
+        }
+
+        // Custom filter accordion
+        .o_accordion {
+            .o_accordion_toggle {
+                color: #212529 !important;
+            }
+
+            .o_accordion_values {
+                background-color: #f8f9fa !important;
+            }
+        }
+
+        // Toggle switches
+        .form-switch {
+            .form-check-input {
+                &:not(:checked) {
+                    background-color: #e9ecef !important;
+                    border-color: #ced4da !important;
+                }
+            }
+        }
+
+        // Links
+        a {
+            color: var(--albirru-primary) !important;
+        }
+
+        // Separator lines
+        .border-start,
+        .border-end {
+            border-color: #dee2e6 !important;
+        }
+    }
+}
+
+
+// =============================================
+// Base Styles
+// =============================================
+.o_searchview {
+    border: 1px solid var(--albirru-light-border) !important;
+    border-radius: var(--albirru-radius-md) !important;
+    background-color: var(--albirru-light-bg-secondary) !important;
+    padding: 2px 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all var(--albirru-transition-fast) !important;
+    box-shadow: var(--albirru-shadow-sm), inset 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+    min-height: 34px !important;
+
+    &:hover {
+        border-color: #bbc0c4 !important; // Slightly darker than default border
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    &:focus-within {
+        border-color: var(--albirru-primary) !important;
+        background-color: var(--albirru-light-bg-secondary) !important;
+        box-shadow: 0 0 0 3px rgba(var(--albirru-primary-rgb), 0.15), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .o_searchview_input_container {
+        border: none !important;
+        padding-left: 12px !important;
+
+        input {
+            &::placeholder {
+                color: var(--albirru-light-text-muted) !important;
+                opacity: 0.7 !important;
+            }
+        }
+    }
+
+    .o_searchview_dropdown_toggler {
+        background-color: var(--albirru-light-bg) !important;
+        color: var(--albirru-primary) !important;
+        border: 1px solid var(--albirru-light-border) !important;
+        border-radius: var(--albirru-radius-sm) !important;
+        margin-left: 4px !important;
+        margin-right: 2px !important;
+        width: 28px !important;
+        height: 28px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all var(--albirru-transition-fast) !important;
+        cursor: pointer !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+
+        &:hover {
+            background-color: var(--albirru-primary) !important;
+            color: var(--albirru-primary-text) !important;
+            border-color: var(--albirru-primary) !important;
+            transform: scale(1.05);
+            box-shadow: var(--albirru-shadow-sm) !important;
+        }
+
+        // Odoo 19 caret icon
+        &::after {
+            border-top-width: 5px !important;
+            border-right-width: 4px !important;
+            border-left-width: 4px !important;
+            border-top-color: currentColor !important;
+        }
+    }
+
+    .o_searchview_icon {
+        color: var(--albirru-primary) !important;
+        margin-left: 10px !important;
+        font-size: 16px !important;
+        opacity: 0.6;
+        transition: opacity var(--albirru-transition-fast) !important;
+    }
+
+    &:hover,
+    &:focus-within {
+        .o_searchview_icon {
+            opacity: 1;
+        }
+    }
+
+    // Search Facets
+    .o_searchview_facet {
+        background-color: rgba(var(--albirru-primary-rgb), 0.1) !important;
+        border: 1px solid rgba(var(--albirru-primary-rgb), 0.2) !important;
+        border-radius: 4px !important;
+        margin-right: 4px !important;
+
+        .o_searchview_facet_label {
+            background-color: var(--albirru-primary) !important;
+            color: var(--albirru-primary-text) !important;
+            border-radius: 3px 0 0 3px !important;
+            padding: 0 6px !important;
+        }
+
+        .o_facet_remove {
+            color: var(--albirru-primary) !important;
+
+            &:hover {
+                color: #ff0000 !important;
+            }
+        }
+    }
+}
+
+// Dark Mode Support
+html.albirru-dark-mode,
+html[data-albirru-dark="true"] {
+    .o_searchview {
+        background-color: var(--albirru-dark-bg-secondary) !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        &:focus-within {
+            border-color: var(--albirru-primary) !important;
+            background-color: var(--albirru-dark-bg-secondary) !important;
+            box-shadow: 0 0 0 3px rgba(var(--albirru-primary-rgb), 0.3), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .o_searchview_input_container input {
+            color: var(--albirru-dark-text) !important;
+
+            &::placeholder {
+                color: var(--albirru-dark-text-muted) !important;
+                opacity: 0.6 !important;
+            }
+        }
+
+        .o_searchview_dropdown_toggler {
+            background-color: var(--albirru-dark-bg) !important;
+            border-color: var(--albirru-dark-border) !important;
+            color: var(--albirru-primary) !important;
+            border-radius: var(--albirru-radius-sm) !important;
+
+            &:hover {
+                background-color: var(--albirru-primary) !important;
+                color: var(--albirru-primary-text) !important;
+                border-color: var(--albirru-primary) !important;
+            }
+        }
+
+        .o_searchview_facet {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+
+            .o_facet_remove {
+                color: var(--albirru-dark-text) !important;
+            }
+        }
+    }
+
+    // Dark mode autocomplete dropdown
+    .o_searchview_autocomplete {
+        background-color: var(--albirru-dark-bg-secondary) !important;
+        border-color: var(--albirru-dark-border) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+
+        .o-dropdown-item,
+        .dropdown-item {
+            color: var(--albirru-dark-text) !important;
+            background-color: transparent !important;
+
+            &:hover,
+            &:focus {
+                background-color: var(--albirru-dark-hover) !important;
+                color: var(--albirru-dark-text) !important;
+            }
+
+            &.active,
+            &:active {
+                background-color: var(--albirru-primary) !important;
+                color: #ffffff !important;
+            }
+        }
+
+        .o_menu_item,
+        .o-dropdown--menu-item {
+            color: var(--albirru-dark-text) !important;
+        }
+
+        // Group headers in autocomplete
+        .o_dropdown_header,
+        .dropdown-header {
+            color: var(--albirru-dark-text-muted) !important;
+            border-bottom-color: var(--albirru-dark-border) !important;
+        }
+    }
+
+    // Dropdown menu general styling for dark mode
+    .dropdown-menu {
+        background-color: var(--albirru-dark-bg-secondary) !important;
+        border-color: var(--albirru-dark-border) !important;
+
+        .dropdown-item {
+            color: var(--albirru-dark-text) !important;
+
+            &:hover,
+            &:focus {
+                background-color: var(--albirru-dark-hover) !important;
+            }
+        }
+    }
+}
+
+// =============================================
+// Search Autocomplete Dropdown - Base & Light Mode
+// =============================================
+.o_searchview_autocomplete {
+    background-color: var(--albirru-light-bg-secondary) !important;
+    border: 1px solid var(--albirru-light-border) !important;
+    border-radius: var(--albirru-radius-md) !important;
+    box-shadow: var(--albirru-shadow-lg) !important;
+    padding: 4px 0 !important;
+
+    .o-dropdown-item,
+    .dropdown-item {
+        color: var(--albirru-light-text) !important;
+        padding: 8px 16px !important;
+        transition: background-color 0.15s ease !important;
+
+        &:hover,
+        &:focus {
+            background-color: var(--albirru-light-hover) !important;
+            color: var(--albirru-light-text) !important;
+        }
+
+        &.active,
+        &:active {
+            background-color: var(--albirru-primary) !important;
+            color: #ffffff !important;
+        }
+
+        a {
+            color: inherit !important;
+        }
+    }
+
+    .o_dropdown_header,
+    .dropdown-header {
+        color: var(--albirru-light-text-muted) !important;
+        font-weight: 600 !important;
+        padding: 6px 16px !important;
+        border-bottom: 1px solid var(--albirru-light-border) !important;
+    }
+}
+
+// Explicit Light Mode for autocomplete
+html:not(.albirru-dark-mode):not([data-albirru-dark="true"]) {
+    .o_searchview_autocomplete {
+        background-color: #ffffff !important;
+        border-color: #dee2e6 !important;
+
+        .o-dropdown-item,
+        .dropdown-item {
+            color: #212529 !important;
+
+            &:hover,
+            &:focus {
+                background-color: #e9ecef !important;
+            }
+        }
+
+        .o_dropdown_header,
+        .dropdown-header {
+            color: #6c757d !important;
+        }
+    }
+}

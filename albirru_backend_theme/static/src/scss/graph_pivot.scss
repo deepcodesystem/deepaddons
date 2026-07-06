@@ -1,0 +1,178 @@
+// Albirru Backend Theme - Graph & Pivot View Styles
+// Compatible with Odoo 19
+
+// =============================================
+// Explicit Light Mode
+// =============================================
+// Ensures standard appearance when not in dark mode
+// Using body selector for higher specificity
+body:not(.albirru-dark-mode),
+html:not([data-albirru-dark="true"]) body,
+html[data-albirru-dark="false"] body {
+
+    .o_pivot_view,
+    .o_graph_view,
+    .o_graph_renderer {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+    }
+
+    // Pivot Table Light Mode
+    .o_pivot_view {
+        .o_pivot_table {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+
+            th {
+                background-color: #f8f9fa !important; // Light gray headers
+                color: #212529 !important;
+                border-color: #dee2e6 !important;
+
+                div,
+                span,
+                b,
+                strong {
+                    color: #212529 !important;
+                }
+            }
+
+            td {
+                background-color: #ffffff !important;
+                color: #212529 !important;
+                border-color: #dee2e6 !important;
+
+                div,
+                span,
+                b,
+                strong {
+                    color: #212529 !important;
+                }
+            }
+
+            .o_pivot_header_cell {
+                &:hover {
+                    background-color: #e9ecef !important;
+                }
+            }
+
+            .o_pivot_cell_value {
+                color: #212529 !important;
+            }
+        }
+    }
+}
+
+// =============================================
+// Dark Mode
+// =============================================
+html.albirru-dark-mode,
+html[data-albirru-dark="true"] {
+
+    // Base Containers
+    .o_pivot_view,
+    .o_graph_view,
+    .o_graph_renderer {
+        background-color: var(--albirru-dark-bg) !important;
+        color: var(--albirru-dark-text) !important;
+
+        .o_view_nocontent {
+            color: var(--albirru-dark-text-muted) !important;
+        }
+    }
+
+    // ------------------------------------------
+    // PIVOT VIEW Styling
+    // ------------------------------------------
+    .o_pivot_view {
+        .o_pivot {
+            background-color: var(--albirru-dark-bg) !important;
+        }
+
+        .o_pivot_table {
+            background-color: var(--albirru-dark-bg) !important;
+            color: var(--albirru-dark-text) !important;
+
+            // Headers (Dimensions)
+            th {
+                background-color: var(--albirru-dark-bg-secondary) !important;
+                color: var(--albirru-dark-text) !important;
+                border-color: var(--albirru-dark-border) !important;
+                font-weight: 600 !important;
+
+                // Force ALL inner elements to inherit color
+                * {
+                    color: inherit !important;
+                }
+            }
+
+            // Data Cells
+            td {
+                background-color: var(--albirru-dark-bg) !important;
+                color: var(--albirru-dark-text) !important;
+                border-color: var(--albirru-dark-border) !important;
+
+                // Force ALL inner elements to inherit color
+                * {
+                    color: inherit !important;
+                }
+            }
+
+            // Interactive Header Cells
+            .o_pivot_header_cell {
+                background-color: var(--albirru-dark-bg-secondary) !important;
+                color: var(--albirru-dark-text) !important;
+
+                &:hover {
+                    background-color: var(--albirru-dark-hover) !important;
+                    color: #ffffff !important;
+                }
+
+                // Opened/Active state
+                &.show,
+                &[aria-expanded="true"] {
+                    background-color: var(--albirru-primary) !important;
+                    color: #ffffff !important;
+                }
+            }
+
+            // Values
+            .o_pivot_cell_value {
+                color: var(--albirru-dark-text) !important;
+
+                div {
+                    color: inherit !important;
+                }
+            }
+
+            // Measure headers with active sorting
+            .o_pivot_measure_row:hover {
+                background-color: var(--albirru-dark-hover) !important;
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // GRAPH VIEW Styling
+    // ------------------------------------------
+    .o_graph_view {
+        .o_graph_canvas_container {
+            background-color: var(--albirru-dark-bg) !important;
+
+            // Fix Chart.js black text by inverting the canvas colors
+            canvas {
+                filter: invert(1) hue-rotate(180deg) !important;
+            }
+        }
+
+        // Toolbar / Buttons above graph
+        .o_graph_controller {
+            button {
+                color: var(--albirru-dark-text) !important;
+            }
+        }
+
+        .o_view_nocontent {
+            background-color: transparent !important;
+        }
+    }
+}
