@@ -21,6 +21,14 @@ class AccountMove(models.Model):
                 vals['l10n_ma_origin_partner_id'] = vals['partner_id']
         return super().create(vals_list)
 
+    def _reverse_moves(self, default_values_list=None, cancel=False):
+        if not default_values_list:
+            default_values_list = [{} for move in self]
+        for move, default_values in zip(self, default_values_list):
+            if move.l10n_ma_origin_partner_id:
+                default_values['l10n_ma_origin_partner_id'] = move.l10n_ma_origin_partner_id.id
+        return super()._reverse_moves(default_values_list, cancel)
+
     @api.onchange('partner_id')
     def _onchange_partner_id_l10n_ma_origin(self):
         """En UI : si le partenaire change et que l'origine n'est pas fixée manuellement,
