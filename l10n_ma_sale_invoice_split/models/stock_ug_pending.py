@@ -50,3 +50,25 @@ class StockUgPending(models.Model):
         self.ensure_one()
         self.qty_invoiced += qty
 
+    @api.model
+    def _handle_ug_return(self, return_moves):
+        for move in return_moves:
+            original_move = move.origin_returned_move_id
+            if not original_move:
+                continue
+            pending = self.search([
+                ('stock_move_id', '=', original_move.id),
+                ('qty_pending', '>', 0),
+            ], limit=1)
+            if not pending:
+                continue
+            returned_qty = move.quantity
+            new_qty_done = max(0.0, pending.qty_done - returned_qty)
+            if new_qty_done <= 0:
+                pending.unlink()
+            else:
+                pending.write({
+                    'qty_done': new_qty_done,
+                    'qty_invoiced': min(pending.qty_invoiced, new_qty_done),
+                })
+
