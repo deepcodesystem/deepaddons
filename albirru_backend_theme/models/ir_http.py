@@ -36,7 +36,7 @@ class IrHttp(models.AbstractModel):
                 try:
                     branding = {
                         'company_id': company.id,
-                        'tab_name': getattr(company, 'albirru_tab_name', None) or 'Odoo',
+                        'tab_name': getattr(company, 'albirru_tab_name', None) or 'DeepOS',
                         'has_logo': bool(getattr(company, 'albirru_backend_logo', False)),
                         'has_logo_icon': bool(getattr(company, 'albirru_backend_logo_icon', False)),
                         'has_favicon': bool(getattr(company, 'albirru_favicon', False)),

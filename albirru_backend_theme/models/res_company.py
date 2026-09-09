@@ -14,7 +14,7 @@ class ResCompany(models.Model):
     albirru_backend_logo = fields.Binary(string='Backend Logo')
     albirru_backend_logo_icon = fields.Binary(string='Backend Logo Icon (Small)')
     albirru_favicon = fields.Binary(string='Favicon')
-    albirru_tab_name = fields.Char(string='Browser Tab Name', default='Odoo')
+    albirru_tab_name = fields.Char(string='Browser Tab Name', default='DeepOS')
 
     # Login Page Branding
     albirru_login_background = fields.Binary(string='Login Background Image')

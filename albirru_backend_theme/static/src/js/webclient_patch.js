@@ -101,8 +101,10 @@ patch(WebClient.prototype, {
         const currentTitle = document.title;
         const separator = " - ";
 
-        // Don't modify if already has branding
-        if (currentTitle.endsWith(separator + name)) {
+        // Don't modify if already has branding, or if the title is already
+        // exactly the brand name (ex. debranding "DeepOS" géré par
+        // deep_debranding : ne pas doubler le suffixe)
+        if (currentTitle.endsWith(separator + name) || currentTitle === name) {
             return;
         }
 
