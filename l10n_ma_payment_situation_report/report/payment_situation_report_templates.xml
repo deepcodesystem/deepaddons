@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_payment_situation_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="data" t-value="doc._get_report_data()"/>
+                <t t-foreach="data" t-as="client_data">
+                    <t t-set="partner" t-value="client_data['partner']"/>
+                    <div class="article">
+                    <div class="page">
+                        <t t-if="client_data_index &gt; 0">
+                            <div style="page-break-before: always;"/>
+                        </t>
+                        <!-- En-tête -->
+                        <div style="text-align:center; margin-bottom: 10px;">
+                            <h2 style="margin:0;">Situation de paiement par client</h2>
+                            <p style="margin:4px 0;">
+                                <strong t-field="partner.name"/>
+                            </p>
+                        </div>
+                        <table style="width:100%; margin-bottom:10px; font-size:12px;">
+                            <tr>
+                                <td><strong>Période :</strong> du <span t-esc="doc.date_from"/> au <span t-esc="doc.date_to"/></td>
+                                <td style="text-align:right;">
+                                    <strong>Édité le :</strong> <span t-esc="doc.create_date" t-options="{'widget': 'date'}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Société :</strong> <span t-field="doc.env.company.name"/></td>
+                                <td style="text-align:right;"><strong>Devise :</strong> <span t-field="doc.env.company.currency_id.name"/></td>
+                            </tr>
+                        </table>
+                        <!-- Détail par bon de commande -->
+                        <t t-if="client_data['orders']">
+                            <table style="width:100%; border-collapse:collapse; font-size:12px;">
+                                <thead>
+                                    <tr style="background-color:#e8e8e8;">
+                                        <th style="border:1px solid #999; padding:5px; text-align:left;">Bon de commande</th>
+                                        <th style="border:1px solid #999; padding:5px; text-align:center;">Factures</th>
+                                        <th style="border:1px solid #999; padding:5px; text-align:right;">Total facturé</th>
+                                        <th style="border:1px solid #999; padding:5px; text-align:right;">Total payé</th>
+                                        <th style="border:1px solid #999; padding:5px; text-align:right;">Solde</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="client_data['orders']" t-as="order">
+                                        <tr>
+                                            <td style="border:1px solid #999; padding:5px;" t-esc="order[1]"/>
+                                            <td style="border:1px solid #999; padding:5px; text-align:center;" t-esc="order[2]"/>
+                                            <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                                t-esc="order[3]" t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                            <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                                t-esc="order[4]" t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                            <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                                t-esc="order[3] - order[4]"
+                                                t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfoot>
+                                    <tr style="background-color:#f0f0f0; font-weight:bold;">
+                                        <td style="border:1px solid #999; padding:5px;">Total</td>
+                                        <td style="border:1px solid #999; padding:5px; text-align:center;"
+                                            t-esc="sum(o[2] for o in client_data['orders'])"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="client_data['total_invoiced']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="client_data['total_paid']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="client_data['total_balance']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </t>
+                        <t t-else="">
+                            <p style="text-align:center; font-style:italic; margin-top:20px;">
+                                Aucune facture enregistrée pour ce client sur la période sélectionnée.
+                            </p>
+                        </t>
+                        <p style="font-size:10px; color:#666; margin-top:10px;">
+                            Note : les montants incluent les factures fractionnées au nom du « Client Comptoir »
+                            attribuées à ce client ainsi que les factures normales. Les avoirs sont déduits (montants négatifs).
+                        </p>
+                        </div>
+                        </div>
+                    </t>
+            </t>
+        </t>
+    </template>
+</odoo>
