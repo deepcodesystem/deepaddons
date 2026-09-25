@@ -11,6 +11,7 @@ class PaymentSituationReportWizard(models.TransientModel):
         'res.partner',
         string='Clients',
         required=True,
+        domain=[('customer_rank', '>', 0)],
         help='Un ou plusieurs clients. Un PDF unique contenant une section par client sera généré.',
     )
     date_from = fields.Date(

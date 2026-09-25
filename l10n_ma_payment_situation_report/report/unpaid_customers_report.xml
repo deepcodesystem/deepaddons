@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_unpaid_customers" model="ir.actions.report">
+        <field name="name">Situation des impayés - tous clients</field>
+        <field name="model">unpaid.customers.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">l10n_ma_payment_situation_report.report_unpaid_customers_document</field>
+        <field name="report_file">l10n_ma_payment_situation_report.report_unpaid_customers_document</field>
+        <field name="print_report_name">'Situation_impayes_%s' % (object.date_to)</field>
+    </record>
+</odoo>

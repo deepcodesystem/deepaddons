@@ -1,14 +1,19 @@
 {
     'name': 'Maroc - Situation de paiement par client',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.1.0',
     'category': 'Accounting',
-    'summary': 'Rapport de situation de paiement par client incluant les factures fractionnées « Client Comptoir »',
+    'summary': 'Rapport de situation de paiement par client et rapport global des impayés (factures fractionnées « Client Comptoir » incluses)',
     'description': """
 Situation de paiement par client
 ================================
 Génère un rapport PDF regroupant, par bon de commande, les factures associées
 (fractionnées « Client Comptoir » incluses, via l10n_ma_origin_partner_id) et leurs paiements.
 Sélection multiple de clients via un champ many2many.
+
+Situation des impayés - tous clients
+====================================
+Génère un PDF listant tous les clients avec un solde impayé (une ligne par client,
+trié par impayé décroissant, total général en fin de rapport).
     """,
     'author': 'GetapERP',
     'website': 'https://www.getaperp.com',
@@ -16,8 +21,11 @@ Sélection multiple de clients via un champ many2many.
     'data': [
         'security/ir.model.access.csv',
         'wizard/payment_situation_wizard_views.xml',
+        'wizard/unpaid_customers_wizard_views.xml',
         'report/payment_situation_report.xml',
         'report/payment_situation_report_templates.xml',
+        'report/unpaid_customers_report.xml',
+        'report/unpaid_customers_report_templates.xml',
     ],
     'license': 'LGPL-3',
     'installable': True,

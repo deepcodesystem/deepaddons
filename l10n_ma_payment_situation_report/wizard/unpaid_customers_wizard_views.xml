@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_unpaid_customers_report_wizard_form" model="ir.ui.view">
+        <field name="name">unpaid.customers.report.wizard.form</field>
+        <field name="model">unpaid.customers.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Situation des impayés - tous clients">
+                <group>
+                    <group>
+                        <field name="date_to"/>
+                    </group>
+                    <group>
+                        <field name="restrict_partners"/>
+                        <field name="partner_ids" widget="many2many_tags"
+                               placeholder="Clients..."
+                               invisible="not restrict_partners"/>
+                    </group>
+                </group>
+                <p class="text-muted">
+                    Le rapport liste tous les clients ayant un solde impayé (factures postées au nom du client
+                    réel, incluant les factures fractionnées « Client Comptoir », avoirs déduits), trié par impayé décroissant.
+                </p>
+                <footer>
+                    <button name="action_print_report" string="Imprimer le rapport" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Annuler" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_unpaid_customers_report_wizard" model="ir.actions.act_window">
+        <field name="name">Situation des impayés</field>
+        <field name="res_model">unpaid.customers.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_unpaid_customers_report_wizard_form"/>
+    </record>
+
+    <menuitem id="menu_unpaid_customers_report"
+              name="Situation des impayés"
+              parent="account.menu_finance_receivables"
+              action="action_unpaid_customers_report_wizard"
+              sequence="91"/>
+</odoo>

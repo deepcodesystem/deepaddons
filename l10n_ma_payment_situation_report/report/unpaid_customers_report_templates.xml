@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_unpaid_customers_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="customers" t-value="doc._get_customers_data()"/>
+                <div class="article">
+                <div class="page">
+                    <div style="text-align:center; margin-bottom: 10px;">
+                        <h2 style="margin:0;">Situation des impayés - tous clients</h2>
+                        <p style="margin:4px 0;">
+                            Situation au <span t-esc="doc.date_to"/>
+                        </p>
+                    </div>
+                    <table style="width:100%; margin-bottom:10px; font-size:12px;">
+                        <tr>
+                            <td><strong>Société :</strong> <span t-field="doc.env.company.name"/></td>
+                            <td style="text-align:right;">
+                                <strong>Édité le :</strong> <span t-esc="doc.create_date" t-options="{'widget': 'date'}"/>
+                                &#160;|&#160; <strong>Devise :</strong> <span t-field="doc.env.company.currency_id.name"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <t t-if="customers">
+                        <table style="width:100%; border-collapse:collapse; font-size:12px;">
+                            <thead>
+                                <tr style="background-color:#e8e8e8;">
+                                    <th style="border:1px solid #999; padding:5px; text-align:left;">Client</th>
+                                    <th style="border:1px solid #999; padding:5px; text-align:center;">Factures</th>
+                                    <th style="border:1px solid #999; padding:5px; text-align:right;">Total facturé</th>
+                                    <th style="border:1px solid #999; padding:5px; text-align:right;">Total payé</th>
+                                    <th style="border:1px solid #999; padding:5px; text-align:right;">Impayé</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="customers" t-as="c">
+                                    <tr>
+                                        <td style="border:1px solid #999; padding:5px;" t-esc="c['partner'].name"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:center;" t-esc="c['invoice_count']"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="c['invoiced']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="c['paid']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                        <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                            t-esc="c['balance']"
+                                            t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                    </tr>
+                                </t>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background-color:#f0f0f0; font-weight:bold;">
+                                    <td style="border:1px solid #999; padding:5px;">Total général</td>
+                                    <td style="border:1px solid #999; padding:5px; text-align:center;"
+                                        t-esc="sum(c['invoice_count'] for c in customers)"/>
+                                    <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                        t-esc="sum(c['invoiced'] for c in customers)"
+                                        t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                    <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                        t-esc="sum(c['paid'] for c in customers)"
+                                        t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                    <td style="border:1px solid #999; padding:5px; text-align:right;"
+                                        t-esc="sum(c['balance'] for c in customers)"
+                                        t-options="{'widget': 'monetary', 'display_currency': doc.env.company.currency_id}"/>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </t>
+                    <t t-else="">
+                        <p style="text-align:center; font-style:italic; margin-top:20px;">
+                            Aucun impayé détecté à la date indiquée.
+                        </p>
+                    </t>
+                    <p style="font-size:10px; color:#666; margin-top:10px;">
+                        Note : les montants incluent les factures fractionnées au nom du « Client Comptoir »
+                        attribuées à chaque client ainsi que les factures normales. Les avoirs sont déduits (montants négatifs).
+                        Seuls les clients avec un solde impayé supérieur à 0 sont listés.
+                    </p>
+                </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
