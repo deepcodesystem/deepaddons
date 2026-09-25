@@ -19,7 +19,7 @@ class UnpaidCustomersReportWizard(models.TransientModel):
     partner_ids = fields.Many2many(
         'res.partner',
         string='Clients',
-        domain=[('customer_rank', '>', 0)],
+        #domain=[('customer_rank', '>', 0)],
         help='Restreint le rapport à ces clients (si "Restreindre à des clients précis" est coché).',
     )
 
