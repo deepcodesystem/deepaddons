@@ -1,6 +1,6 @@
 {
     'name': 'Maroc - Situation de paiement par client',
-    'version': '18.0.1.1.0',
+    'version': '18.0.1.2.0',
     'category': 'Accounting',
     'summary': 'Rapport de situation de paiement par client et rapport global des impayés (factures fractionnées « Client Comptoir » incluses)',
     'description': """
