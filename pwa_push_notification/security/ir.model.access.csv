@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_push_subscription_user,push.subscription.user,model_push_subscription,base.group_user,1,1,1,0
+access_push_subscription_manager,push.subscription.manager,model_push_subscription,base.group_system,1,1,1,1
+access_push_subscription_system,push.subscription.system,model_push_subscription,base.group_erp_manager,1,1,1,1

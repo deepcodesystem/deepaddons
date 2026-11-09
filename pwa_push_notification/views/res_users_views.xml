@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend the res.users form view with a Push Notifications tab -->
+    <record id="view_users_form_push_notifications" model="ir.ui.view">
+        <field name="name">res.users.form.push.notifications</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Push Notifications" name="push_notifications">
+                    <group>
+                        <field name="push_subscription_count"
+                               string="Active Subscriptions"
+                               readonly="1"/>
+                        <button name="action_send_test_push_notification"
+                                string="Send Test Notification"
+                                type="object"
+                                class="btn-secondary"
+                                icon="fa-bell"/>
+                    </group>
+                    <field name="push_subscription_ids"
+                           string="Subscriptions"
+                           mode="list"
+                           context="{'default_user_id': active_id}">
+                        <list>
+                            <field name="endpoint" string="Endpoint"/>
+                            <field name="create_date" string="Subscribed On"/>
+                            <field name="last_notification_date"
+                                   string="Last Notification"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

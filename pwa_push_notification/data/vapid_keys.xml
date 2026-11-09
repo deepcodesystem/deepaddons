@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    VAPID Key Configuration
+
+    VAPID (Voluntary Application Server Identification) keys are required for
+    sending Web Push notifications. You MUST generate your own unique keys
+    and replace the placeholder values below.
+
+    How to generate VAPID keys with Python:
+        pip install py-vapid
+        python3 -m py_vapid  (or use https://vapidkeys.com/)
+
+    SECURITY NOTE: Keep the private key secret. Do not commit real keys to
+    version control. Use Odoo System Parameters to update the keys after
+    installation via: Settings > Technical > Parameters > System Parameters.
+-->
+<odoo noupdate="1">
+    <record id="param_vapid_public_key" model="ir.config_parameter">
+        <field name="key">pwa_push.vapid_public_key</field>
+        <field name="value">REPLACE_WITH_YOUR_VAPID_PUBLIC_KEY</field>
+    </record>
+
+    <record id="param_vapid_private_key" model="ir.config_parameter">
+        <field name="key">pwa_push.vapid_private_key</field>
+        <field name="value">REPLACE_WITH_YOUR_VAPID_PRIVATE_KEY</field>
+    </record>
+
+    <record id="param_vapid_email" model="ir.config_parameter">
+        <field name="key">pwa_push.vapid_email</field>
+        <field name="value">mailto:admin@example.com</field>
+    </record>
+</odoo>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_push_subscription_list" model="ir.ui.view">
+        <field name="name">push.subscription.list</field>
+        <field name="model">push.subscription</field>
+        <field name="arch" type="xml">
+            <list string="Push Subscriptions" decoration-muted="not active">
+                <field name="user_id"/>
+                <field name="endpoint" string="Endpoint" optional="show"
+                       invisible="not endpoint"/>
+                <field name="create_date" string="Subscribed On"/>
+                <field name="last_notification_date" string="Last Notification"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_push_subscription_form" model="ir.ui.view">
+        <field name="name">push.subscription.form</field>
+        <field name="model">push.subscription</field>
+        <field name="arch" type="xml">
+            <form string="Push Subscription">
+                <header>
+                    <button name="action_test_notification"
+                            string="Test Notification"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-bell"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="General">
+                            <field name="user_id"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="create_date" string="Subscribed On"/>
+                            <field name="last_notification_date"/>
+                        </group>
+                    </group>
+                    <group string="Technical Details">
+                        <field name="endpoint" string="Endpoint URL"/>
+                        <field name="p256dh_key" string="P256DH Key"/>
+                        <field name="auth_key" string="Auth Key"/>
+                        <field name="subscription_json" string="Full JSON"
+                               widget="text"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_push_subscription" model="ir.actions.act_window">
+        <field name="name">Push Subscriptions</field>
+        <field name="res_model">push.subscription</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No push subscriptions yet.
+            </p>
+            <p>
+                Users must accept notifications in their browser to
+                appear here.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu under Settings > Technical -->
+    <menuitem id="menu_push_subscription_root"
+              name="Push Notifications"
+              parent="base.menu_administration"
+              sequence="100"/>
+
+    <menuitem id="menu_push_subscription"
+              name="Push Subscriptions"
+              parent="menu_push_subscription_root"
+              action="action_push_subscription"
+              sequence="10"/>
+</odoo>
