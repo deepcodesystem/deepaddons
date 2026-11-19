@@ -1,6 +1,6 @@
 {
     'name': 'Fractionnement Factures 5000 DH (Maroc)',
-    'version': '18.0.1.2.0',
+    'version': '18.0.1.3.0',
     'category': 'Accounting/Localizations',
     'summary': 'Créer plusieurs factures clients depuis une commande vente - Limite 5000 DH espèces (législation marocaine)',
     'author': 'GetapPRO',
